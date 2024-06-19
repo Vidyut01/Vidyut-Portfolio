@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-      <section className="flex w-full h-screen bg-gradient-to-br from-sky-200 to-blue-400">
+      <header className="flex w-full h-screen bg-gradient-to-br from-sky-200 to-[#72b7f8]">
         <figure className="w-full grid items-center justify-end">
           <img src="https://picsum.photos/300" alt="profile_image" className="rounded-full"/>
         </figure>
@@ -15,7 +15,9 @@ export default function Home() {
             <p className="text-2xl">I&#39;m a Software Engineer</p>
           </div>
         </div>
-      </section>
+      </header>
+
+      <p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p>
     </div>
   );
 }

@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 body {
-  background-color: #c7ecfc;
+  background-color: #72b7f8;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
 }
