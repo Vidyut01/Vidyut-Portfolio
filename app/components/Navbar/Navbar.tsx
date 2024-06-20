@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import NavItem from "./NavItem"
 import { usePathname } from "next/navigation"
+import Link from "next/link"
 
 const Navbar = () => {
   const currentRoute = usePathname();
@@ -27,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav className={`h-16 fixed top-0 w-full flex px-10 items-center justify-between ${isTransparent ? 'bg-transparent' :' bg-[#e2e2e2]'} transition duration-200`}>
-        <h1 className="text-3xl font-bold">Vidyut Venkatesan <code className="text-2xl">{currentRoute != '/' && currentRoute}</code></h1>
+        <h1 className="text-3xl font-bold"><Link href={'/'}>Vidyut Venkatesan</Link> <code className="text-2xl">{currentRoute != '/' && currentRoute}</code></h1>
         <aside className="flex">
             <NavItem name="Home" href="/" />
             <NavItem name="About" href="/about" />
