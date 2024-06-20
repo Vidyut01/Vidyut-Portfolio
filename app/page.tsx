@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-      <header className="flex w-full h-screen bg-gradient-to-br from-sky-200 to-[#72b7f8]">
+      <header className="flex w-full h-screen bg-gradient-to-br from-[#f1f1f1] via-gray-300 to-gray-500">
         <figure className="w-full grid items-center justify-end">
           <img src="https://picsum.photos/300" alt="profile_image" className="rounded-full"/>
         </figure>
@@ -17,7 +17,9 @@ export default function Home() {
         </div>
       </header>
 
-      <p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p>
+      <main className="bg-[#f1f1f1] ">
+        <p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p><p>sfsf</p>
+      </main>
     </div>
   );
 }
