@@ -4,6 +4,13 @@ import { useEffect, useState } from "react"
 import NavItem from "./NavItem"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
+import a, { Playfair_Display, Caveat, Kaushan_Script, Fugaz_One } from "next/font/google"
+
+
+const headingFont = Fugaz_One({
+  weight: '400',
+  subsets: ['latin'],
+})
 
 const Navbar = () => {
   const currentRoute = usePathname();
@@ -27,8 +34,8 @@ const Navbar = () => {
   }, [isTransparent]);
 
   return (
-    <nav className={`h-16 fixed top-0 w-full flex px-10 items-center justify-between ${isTransparent ? 'bg-transparent' :' bg-[#e2e2e2]'} transition duration-200`}>
-        <h1 className="text-3xl font-bold"><Link href={'/'}>Vidyut Venkatesan</Link> <code className="text-2xl">{currentRoute != '/' && currentRoute}</code></h1>
+    <nav className={`z-50 h-16 fixed top-0 w-full flex px-32 items-center justify-between ${isTransparent ? 'bg-transparent' :' bg-[#e2e2e2]'} transition duration-200 animate-fade-nav`}>
+        <h1 className="text-3xl font-bold"><Link href={'/'} className={headingFont.className}>Vidyut Venkatesan</Link> <code className="text-2xl">{currentRoute != '/' && currentRoute}</code></h1>
         <aside className="flex">
             <NavItem name="Home" href="/" />
             <NavItem name="About" href="/about" />

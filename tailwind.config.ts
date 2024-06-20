@@ -15,13 +15,18 @@ const config: Config = {
       },
 
       animation: {
-        "fade-header": 'fadeIn .5s ease-in-out',
+        "fade-header": 'fadeIn 1s ease-in-out',
+        "fade-nav": 'fadeInNav 1s ease-in-out',
       },
 
       keyframes: {
         fadeIn: {
-					from: { opacity: '0', "padding-top": '50px' },
+					from: { opacity: '0', "padding-top": '100px' },
 					to: { opacity: '1', "padding-top": '0' },
+				},
+        fadeInNav: {
+					from: { opacity: '0', "margin-top": '-50px' },
+					to: { opacity: '1', "margin-top": '0' },
 				},
       },
     },
