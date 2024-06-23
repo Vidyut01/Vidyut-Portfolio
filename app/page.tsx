@@ -1,5 +1,5 @@
 import Image from "next/image";
-import WhoAmI from "./components/Home/WhoAmI";
+import WhoAmI from "^/Home/WhoAmI";
 
 export default function Home() {
   return (
