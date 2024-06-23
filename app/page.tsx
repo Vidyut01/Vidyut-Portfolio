@@ -21,9 +21,7 @@ export default function Home() {
 
       <hr className="mx-10 sm:mx-28 rounded-full h-1 bg-gray-600 my-10" />
       
-      <main className="px-12 lg:px-32 mb-10">
-        <WhoAmI />
-      </main>
+      <WhoAmI />
     </div>
   );
 }

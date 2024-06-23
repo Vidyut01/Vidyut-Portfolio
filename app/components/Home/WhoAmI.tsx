@@ -11,7 +11,7 @@ const subtitleFont = Reem_Kufi({
 
 const WhoAmI = () => {
   return (
-    <section className="flex flex-col items-center lg:flex-row lg:items-start justify-between overflow-hidden">
+    <section className="flex flex-col items-center lg:flex-row lg:items-start justify-between overflow-hidden px-12 lg:px-32 mb-10">
       <motion.article
         className="lg:w-[75%] flex flex-col items-center mb-10 lg:mb-0"
         initial={{ opacity: '0', x: '-100%' }}

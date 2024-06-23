@@ -1,8 +1,9 @@
-import React from 'react'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div className='mt-16 px-36 mb-10'>
+      about
+    </div>
   )
 }
 
