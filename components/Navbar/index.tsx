@@ -13,7 +13,7 @@ import { AnimatePresence } from "framer-motion"
 const headingFont = Fugaz_One({
   weight: '400',
   subsets: ['latin'],
-})
+});
 
 const Navbar = () => {
   const currentRoute = usePathname();

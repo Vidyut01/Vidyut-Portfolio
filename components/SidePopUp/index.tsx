@@ -19,9 +19,9 @@ const LeftSidePopUp = ({children}: {children: Readonly<React.ReactNode>}) => {
       initial={{ opacity: 0, x: '-100%' }}
       whileInView={{ opacity: 1, x: '0' }}
       viewport={{ once: true }}
-      transition={{ duration: .75 }}
+      transition={{ duration: 1 }}
     >
-      <div className="w-full flex flex-col items-center mt-10 mx-10">
+      <div className="w-full flex flex-col items-center m-10">
         <h1 className="text-3xl">{title}</h1>
         <p className="mt-20">{content}</p>
       </div>
@@ -41,10 +41,10 @@ const RightSidePopUp = ({children}: {children: Readonly<React.ReactNode>}) => {
       initial={{ opacity: 0, x: '100%' }}
       whileInView={{ opacity: 1, x: '0' }}
       viewport={{ once: true }}
-      transition={{ duration: .75 }}
+      transition={{ duration: 1 }}
     >
       {image}
-      <div className="w-full flex flex-col items-center mt-10 mx-10">
+      <div className="w-full flex flex-col items-center m-10">
         <h1 className="text-3xl">{title}</h1>
         <p className="mt-20">{content}</p>
       </div>
