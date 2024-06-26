@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React from "react";
 
 const getChildren = (children: React.ReactNode, name: string) => 
@@ -60,7 +61,17 @@ const SidePopUpContent = ({children}: {children: Readonly<React.ReactNode>}) => 
 
 const SidePopUpTitle = ({children}: {children: Readonly<React.ReactNode>}) => <>{children}</>;
 
-const SidePopUpImage = ({children}: {children: Readonly<React.ReactNode>}) => <>{children}</>;
+const SidePopUpImage = ({
+  src,
+  alt,
+  width,
+  height
+}: {
+  src: string,
+  alt: string,
+  width: number,
+  height: number
+}) => <Image src={src} alt={alt} width={width} height={height} />;
 
 LeftSidePopUp.Content = SidePopUpContent;
 LeftSidePopUp.Title = SidePopUpTitle;

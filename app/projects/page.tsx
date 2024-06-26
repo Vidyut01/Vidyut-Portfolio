@@ -39,9 +39,7 @@ const Projects = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure non provident, rem ratione quisquam sint architecto cum. Ducimus porro sequi debitis architecto dolorum laboriosam id soluta, eveniet possimus ipsa quia.
           </LeftSidePopUp.Content>
 
-          <LeftSidePopUp.Image>
-            <Image src={'/next.svg'} alt="pic" width={350} height={350} />
-          </LeftSidePopUp.Image>
+          <LeftSidePopUp.Image src={'/next.svg'} alt="pic" width={350} height={350} />
         </LeftSidePopUp>
 
         <hr className="mx-10 sm:mx-28 rounded-full h-1 bg-gray-600 my-2" />
@@ -55,9 +53,7 @@ const Projects = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure non provident, rem ratione quisquam sint architecto cum. Ducimus porro sequi debitis architecto dolorum laboriosam id soluta, eveniet possimus ipsa quia.
           </RightSidePopUp.Content>
           
-          <RightSidePopUp.Image>
-            <Image src={'/next.svg'} alt="pic" width={350} height={350} />
-          </RightSidePopUp.Image>
+          <RightSidePopUp.Image src={'/next.svg'} alt="pic" width={350} height={350} />
         </RightSidePopUp>
 
         <hr className="mx-10 sm:mx-28 rounded-full h-1 bg-gray-600 my-2" />
@@ -71,9 +67,7 @@ const Projects = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure non provident, rem ratione quisquam sint architecto cum. Ducimus porro sequi debitis architecto dolorum laboriosam id soluta, eveniet possimus ipsa quia.
           </LeftSidePopUp.Content>
 
-          <LeftSidePopUp.Image>
-            <Image src={'/next.svg'} alt="pic" width={350} height={350} />
-          </LeftSidePopUp.Image>
+          <LeftSidePopUp.Image src={'/next.svg'} alt="pic" width={350} height={350} />
         </LeftSidePopUp>
 
         <hr className="mx-10 sm:mx-28 rounded-full h-1 bg-gray-600 my-2" />
@@ -87,9 +81,7 @@ const Projects = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure non provident, rem ratione quisquam sint architecto cum. Ducimus porro sequi debitis architecto dolorum laboriosam id soluta, eveniet possimus ipsa quia.
           </RightSidePopUp.Content>
           
-          <RightSidePopUp.Image>
-            <Image src={'/next.svg'} alt="pic" width={350} height={350} />
-          </RightSidePopUp.Image>
+          <RightSidePopUp.Image src={'/next.svg'} alt="pic" width={350} height={350} />
         </RightSidePopUp>
       </main>
     </div>
