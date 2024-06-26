@@ -1,13 +1,15 @@
 'use client'
 
 import { useEffect, useState } from "react"
-import NavItem from "./NavItem"
 import { usePathname } from "next/navigation"
-import Link from "next/link"
 import { Fugaz_One } from "next/font/google"
-import MobileNavModal from "./MobileNavModal"
-import { IoMenu } from "react-icons/io5"
+import Link from "next/link"
+
 import { AnimatePresence } from "framer-motion"
+import { IoMenu } from "react-icons/io5"
+
+import NavItem from "./NavItem"
+import MobileNavModal from "./MobileNavModal"
 
 
 const headingFont = Fugaz_One({

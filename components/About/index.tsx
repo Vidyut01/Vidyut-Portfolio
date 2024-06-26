@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Reem_Kufi } from "next/font/google";
+
 import { motion } from "framer-motion";
 
 const subtitleFont = Reem_Kufi({

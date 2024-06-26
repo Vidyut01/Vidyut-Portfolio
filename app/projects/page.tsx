@@ -1,10 +1,12 @@
 'use client'
 
 import React from 'react'
-import { LeftSidePopUp, RightSidePopUp } from '^/SidePopUp'
 import Image from 'next/image'
 import { Fugaz_One } from 'next/font/google';
+
 import { motion } from 'framer-motion';
+
+import { LeftSidePopUp, RightSidePopUp } from '^/SidePopUp'
 
 const headingFont = Fugaz_One({
   weight: '400',

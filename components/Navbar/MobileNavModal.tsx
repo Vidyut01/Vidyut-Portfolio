@@ -1,10 +1,12 @@
 'use client'
 
 import React from 'react'
-import NavItem from './NavItem'
-import { IoClose } from 'react-icons/io5'
-import { motion } from 'framer-motion'
 import { NextFont } from 'next/dist/compiled/@next/font'
+
+import { motion } from 'framer-motion'
+import { IoClose } from 'react-icons/io5'
+
+import NavItem from './NavItem'
 
 const MobileNavModal = ({closeHandler, headingFont}: {closeHandler: React.Dispatch<React.SetStateAction<boolean>>, headingFont: NextFont}) => {
   return (
