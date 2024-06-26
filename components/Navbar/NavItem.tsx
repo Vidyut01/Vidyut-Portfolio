@@ -3,7 +3,17 @@ import { usePathname } from "next/navigation"
 
 import styles from './NavItem.module.css'
 
-const NavItem = ({name, href, className, onClick}: {name: string, href: string, className?: string, onClick?: () => void}) => {
+const NavItem = ({
+  name,
+  href,
+  onClick,
+  className
+}: {
+  name: string,
+  href: string,
+  onClick?: () => void,
+  className?: string
+}) => {
   const currentRoute = usePathname();
   return (
     <div className={`px-3 ${className && className}`}>

@@ -8,7 +8,13 @@ import { IoClose } from 'react-icons/io5'
 
 import NavItem from './NavItem'
 
-const MobileNavModal = ({closeHandler, headingFont}: {closeHandler: React.Dispatch<React.SetStateAction<boolean>>, headingFont: NextFont}) => {
+const MobileNavModal = ({
+  closeHandler,
+  headingFont
+}: {
+  closeHandler: React.Dispatch<React.SetStateAction<boolean>>,
+  headingFont: NextFont
+}) => {
   return (
     <motion.div
       onClick={e => e.stopPropagation()}
