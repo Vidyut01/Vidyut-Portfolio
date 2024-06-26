@@ -15,13 +15,13 @@ const LeftSidePopUp = ({children}: {children: Readonly<React.ReactNode>}) => {
 
   return (
     <motion.div
-      className="flex justify-between py-2"
+      className="flex flex-col lg:flex-row items-center lg:justify-between py-2"
       initial={{ opacity: 0, x: '-100%' }}
       whileInView={{ opacity: 1, x: '0' }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
     >
-      <div className="w-full flex flex-col items-center m-10">
+      <div className="w-full flex flex-col lg:items-center justify-center m-10">
         <h1 className="text-3xl">{title}</h1>
         <p className="mt-20">{content}</p>
       </div>
@@ -37,14 +37,18 @@ const RightSidePopUp = ({children}: {children: Readonly<React.ReactNode>}) => {
 
   return (
     <motion.div
-      className="flex justify-between py-2"
+      className="flex flex-col lg:flex-row items-center lg:justify-between py-2"
       initial={{ opacity: 0, x: '100%' }}
       whileInView={{ opacity: 1, x: '0' }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
     >
+      <div className="w-full flex flex-col justify-center m-10 text-right lg:hidden">
+        <h1 className="text-3xl">{title}</h1>
+        <p className="mt-20">{content}</p>
+      </div>
       {image}
-      <div className="w-full flex flex-col items-center m-10">
+      <div className="w-full lg:flex flex-col items-center m-10 text-left hidden">
         <h1 className="text-3xl">{title}</h1>
         <p className="mt-20">{content}</p>
       </div>

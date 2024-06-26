@@ -4,6 +4,7 @@ import React from 'react'
 import { LeftSidePopUp, RightSidePopUp } from '^/SidePopUp'
 import Image from 'next/image'
 import { Fugaz_One } from 'next/font/google';
+import { motion } from 'framer-motion';
 
 const headingFont = Fugaz_One({
   weight: '400',
@@ -12,16 +13,21 @@ const headingFont = Fugaz_One({
 
 const Projects = () => {
   return (
-    <div className='mt-16 mx-36 mb-10'>
-      <header className='h-screen flex items-center justify-evenly'>
+    <div className='mt-16 mx-12 lg:mx-36 mb-10'>
+      <motion.header
+        className='h-screen flex flex-col lg:flex-row items-center justify-evenly'
+        initial={{ opacity: 0, y: '100px' }}
+        animate={{ opacity: 1, y: '0' }}
+        transition={{ duration: 1 }}
+      >
         <div className='text-center'>
           <h1 className={`text-4xl mb-10 ${headingFont.className}`}>My Projects</h1>
-          <h3 className='text-2xl'>Here are some of the projects I&#39;ve worked on</h3>
+          <h3 className='text-2xl'>Here are some of the projects I&#39;ve worked on:</h3>
         </div>
         <figure>
-          <img src='https://picsum.photos/300' />
+          <Image src='/vercel.svg' alt='alt' width={300} height={300} />
         </figure>
-      </header>
+      </motion.header>
 
       <main className='flex flex-col gap-20 overflow-hidden'>
         <LeftSidePopUp>
