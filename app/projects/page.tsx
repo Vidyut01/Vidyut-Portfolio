@@ -24,7 +24,7 @@ const Projects = () => {
       >
         <div className='text-center'>
           <h1 className={`text-4xl mb-10 ${headingFont.className}`}>My Projects</h1>
-          <h3 className='text-2xl'>Here are some of the projects I&#39;ve worked on:</h3>
+          <h3 className='text-2xl'>Explore the projects I&#39;ve worked on and my achievements:</h3>
         </div>  
       </motion.header>
 
