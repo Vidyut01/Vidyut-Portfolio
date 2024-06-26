@@ -1,5 +1,5 @@
 import Image from "next/image";
-import WhoAmI from "^/Home/WhoAmI";
+import About from "^/About";
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
 
       <hr className="mx-10 sm:mx-28 rounded-full h-1 bg-gray-600 my-10" />
       
-      <WhoAmI />
+      <About />
     </div>
   );
 }
