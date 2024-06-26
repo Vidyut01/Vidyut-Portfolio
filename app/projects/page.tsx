@@ -17,7 +17,7 @@ const Projects = () => {
   return (
     <div className='mt-16 mx-12 lg:mx-36 mb-10'>
       <motion.header
-        className='h-screen flex flex-col lg:flex-row items-center justify-evenly'
+        className='h-[50vh] flex flex-col lg:flex-row items-center justify-evenly'
         initial={{ opacity: 0, y: '100px' }}
         animate={{ opacity: 1, y: '0' }}
         transition={{ duration: 1 }}
@@ -25,10 +25,7 @@ const Projects = () => {
         <div className='text-center'>
           <h1 className={`text-4xl mb-10 ${headingFont.className}`}>My Projects</h1>
           <h3 className='text-2xl'>Here are some of the projects I&#39;ve worked on:</h3>
-        </div>
-        <figure>
-          <Image src='/vercel.svg' alt='alt' width={300} height={300} />
-        </figure>
+        </div>  
       </motion.header>
 
       <main className='flex flex-col gap-20 overflow-hidden'>

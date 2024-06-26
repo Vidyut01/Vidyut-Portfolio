@@ -51,6 +51,7 @@ const Navbar = () => {
         </h1>
         <aside className="min-[940px]:flex hidden">
             <NavItem name="Home" href="/" />
+            <NavItem name="Skills" href="/skills" />
             <NavItem name="Projects" href="/projects" />
             <NavItem name="Resume" href="/resume" />
             <NavItem name="Contact" href="/contact" />
