@@ -37,8 +37,6 @@ const MobileNavModal = ({
       <div className='flex flex-col items-center justify-center h-full'>
         <NavItem name="Home" href="/" className='my-5' onClick={() => {closeHandler(false)}} />
         <hr className='bg-gray-600 w-[80%] rounded-full border-gray-600' />
-        <NavItem name="Skills" href="/skills" className='my-5' onClick={() => {closeHandler(false)}} />
-        <hr className='bg-gray-600 w-[80%] rounded-full border-gray-600' />
         <NavItem name="Projects" href="/projects" className='my-5' onClick={() => {closeHandler(false)}} />
         <hr className='bg-gray-600 w-[80%] rounded-full border-gray-600' />
         <NavItem name="Resume" href="/resume" className='my-5' onClick={() => {closeHandler(false)}} />
