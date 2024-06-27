@@ -5,15 +5,12 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 
-const getChildren = (children: React.ReactNode, name: string) => 
-  React.Children.map(children, (child: any) => 
-    child.type.name === name ? child : null
-  );
+import useChildren from "@/hooks/useChildren";
 
 const LeftSidePopUp = ({children}: {children: Readonly<React.ReactNode>}) => {
-  const title = getChildren(children, 'SidePopUpTitle')
-  const content = getChildren(children, 'SidePopUpContent');
-  const image = getChildren(children, 'SidePopUpImage')
+  const title = useChildren(children, 'SidePopUpTitle')
+  const content = useChildren(children, 'SidePopUpContent');
+  const image = useChildren(children, 'SidePopUpImage')
 
   return (
     <motion.div
@@ -33,9 +30,9 @@ const LeftSidePopUp = ({children}: {children: Readonly<React.ReactNode>}) => {
 };
 
 const RightSidePopUp = ({children}: {children: Readonly<React.ReactNode>}) => {
-  const title = getChildren(children, 'SidePopUpTitle')
-  const content = getChildren(children, 'SidePopUpContent');
-  const image = getChildren(children, 'SidePopUpImage')
+  const title = useChildren(children, 'SidePopUpTitle')
+  const content = useChildren(children, 'SidePopUpContent');
+  const image = useChildren(children, 'SidePopUpImage')
 
   return (
     <motion.div
