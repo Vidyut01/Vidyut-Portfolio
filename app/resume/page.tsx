@@ -4,10 +4,11 @@ import React from 'react'
 import { Fugaz_One } from 'next/font/google';
 
 import { motion } from 'framer-motion'
-import { Button, Card } from 'react-daisyui';
+import { Button } from 'react-daisyui';
+import { BsDownload } from 'react-icons/bs';
 
 import ResumeCard from '^/ResumeCard';
-import { BsDownload } from 'react-icons/bs';
+import resumeData from '@/json/resume.json';
 
 const headingFont = Fugaz_One({
     weight: '400',
@@ -34,23 +35,17 @@ const Resume = () => {
           <h2 className={`text-3xl ${headingFont.className}`}>Experience:</h2>
           <hr className='my-3 border-black rounded-full' />
           <div className='flex flex-wrap justify-between text-[#2e2e2e]'>
-            <ResumeCard
-              title='Website Administrator'
-              subtitle='RMIT Information Security Collective'
-              duration='Dec 2023 - Present'
-              minCardSize={48}
-            >
-              Worked with fellow club members to gather requimrents and build a club website and maintain it.
-            </ResumeCard>
-
-            <ResumeCard
-              title='Team Member'
-              subtitle='RMIT Google Develeper Student Clubs'
-              duration='Mar 2024 - Present'
-              minCardSize={48}
-            >
-              Collaborate with team of volunteers to plan, organize, and execute various events aimed at individuals with varying levels of technical expertise
-            </ResumeCard>
+            {resumeData.experience.map((e, i) => 
+              <ResumeCard
+                key={i}
+                title={e.title}
+                subtitle={e.subtitle}
+                duration={e.duration}
+                minCardSize={48}
+              >
+                {e.content}
+              </ResumeCard>
+            )}
           </div>
         </section>
 
@@ -60,11 +55,14 @@ const Resume = () => {
           <h2 className={`text-3xl ${headingFont.className}`}>Education:</h2>
           <hr className='my-3 border-black rounded-full' />
           <div className='flex flex-wrap justify-between text-[#2e2e2e]'>
-            <ResumeCard
-              title='RMIT University'
-              subtitle='Bachelor of Software Engineering'
-              duration='Feb 2022 - Nov 2025'
-            />
+            {resumeData.education.map((e, i) => 
+              <ResumeCard
+                key={i}
+                title={e.title}
+                subtitle={e.subtitle}
+                duration={e.duration}
+              />
+            )}
           </div>
         </section>
 

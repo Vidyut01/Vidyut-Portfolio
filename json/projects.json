@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Project 1",
+        "content": "lorem ipsum",
+        "image": "/next.svg"
+    },
+    {
+        "title": "Project 2",
+        "content": "lorem ipsum",
+        "image": "/next.svg"
+    },
+    {
+        "title": "Project 3",
+        "content": "lorem ipsum",
+        "image": "/next.svg"
+    },
+    {
+        "title": "Project 4",
+        "content": "lorem ipsum",
+        "image": "/next.svg"
+    }
+]

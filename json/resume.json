@@ -1,0 +1,24 @@
+{
+    "experience": [
+        {
+            "title": "Website Administrator",
+            "subtitle": "RMIT Information Security Collective",
+            "duration": "Dec 2023 - Present",
+            "content": "Worked with fellow club members to gather requimrents and build a club website and maintain it."
+        },
+        {
+            "title": "Team Member",
+            "subtitle": "RMIT Google Develeper Student Clubs",
+            "duration": "Mar 2024 - Present",
+            "content": "Collaborate with team of volunteers to plan, organize, and execute various events aimed at individuals with varying levels of technical expertise."
+        }
+    ],
+
+    "education": [
+        {
+            "title": "RMIT University",
+            "subtitle": "Bachelor of Software Engineering",
+            "duration": "Feb 2022 - Nov 2025"
+        }
+    ]
+}
