@@ -14,6 +14,10 @@ const headingFont = Fugaz_One({
 });
 
 const Projects = () => {
+  const title = 'fdfdf';
+  const content = 'gfdsgd';
+  const img = '/next.svg';
+
   return (
     <div className='mt-16 mx-12 lg:mx-36 mb-10'>
       <motion.header
@@ -29,58 +33,26 @@ const Projects = () => {
       </motion.header>
 
       <main className='flex flex-col gap-20 overflow-hidden'>
-        <LeftSidePopUp>
-          <LeftSidePopUp.Title>
-            Project 1
-          </LeftSidePopUp.Title>
-          
-          <LeftSidePopUp.Content>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure non provident, rem ratione quisquam sint architecto cum. Ducimus porro sequi debitis architecto dolorum laboriosam id soluta, eveniet possimus ipsa quia.
-          </LeftSidePopUp.Content>
-
-          <LeftSidePopUp.Image src={'/next.svg'} alt="pic" width={350} height={350} />
+        <LeftSidePopUp title='Project 1' image='/next.svg'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias corporis qui explicabo consectetur deleniti soluta esse dignissimos accusamus reprehenderit. Harum, accusamus. Eveniet sit iste sint vitae ullam. Animi, nam magnam.
         </LeftSidePopUp>
 
         <hr className="mx-10 sm:mx-28 rounded-full h-1 bg-gray-600 my-2" />
 
-        <RightSidePopUp>
-          <RightSidePopUp.Title>
-            Project 2
-          </RightSidePopUp.Title>
-
-          <RightSidePopUp.Content>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure non provident, rem ratione quisquam sint architecto cum. Ducimus porro sequi debitis architecto dolorum laboriosam id soluta, eveniet possimus ipsa quia.
-          </RightSidePopUp.Content>
-          
-          <RightSidePopUp.Image src={'/next.svg'} alt="pic" width={350} height={350} />
+        <RightSidePopUp title='Project 1' image='/next.svg'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab obcaecati quam excepturi quo cum earum placeat dolor corrupti, aperiam dolores iusto id nesciunt velit veritatis voluptatibus quos officiis ipsam fuga.
         </RightSidePopUp>
 
         <hr className="mx-10 sm:mx-28 rounded-full h-1 bg-gray-600 my-2" />
 
-        <LeftSidePopUp>
-          <LeftSidePopUp.Title>
-            Project 3
-          </LeftSidePopUp.Title>
-          
-          <LeftSidePopUp.Content>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure non provident, rem ratione quisquam sint architecto cum. Ducimus porro sequi debitis architecto dolorum laboriosam id soluta, eveniet possimus ipsa quia.
-          </LeftSidePopUp.Content>
-
-          <LeftSidePopUp.Image src={'/next.svg'} alt="pic" width={350} height={350} />
+        <LeftSidePopUp title='Project 1' image='/next.svg'>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi cupiditate dicta ea earum porro hic, sequi quisquam aliquid expedita laboriosam numquam illum praesentium neque minus magni, vitae nulla quod aut.
         </LeftSidePopUp>
 
         <hr className="mx-10 sm:mx-28 rounded-full h-1 bg-gray-600 my-2" />
 
-        <RightSidePopUp>
-          <RightSidePopUp.Title>
-            Project 4
-          </RightSidePopUp.Title>
-
-          <RightSidePopUp.Content>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure non provident, rem ratione quisquam sint architecto cum. Ducimus porro sequi debitis architecto dolorum laboriosam id soluta, eveniet possimus ipsa quia.
-          </RightSidePopUp.Content>
-          
-          <RightSidePopUp.Image src={'/next.svg'} alt="pic" width={350} height={350} />
+        <RightSidePopUp title='Project 1' image='/next.svg'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem id ullam mollitia exercitationem voluptatum illo quaerat magnam sunt minus, rem obcaecati aperiam commodi eligendi illum vero tenetur vel. Temporibus?
         </RightSidePopUp>
       </main>
     </div>

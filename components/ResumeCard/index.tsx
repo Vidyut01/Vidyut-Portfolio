@@ -5,17 +5,13 @@ import React from 'react'
 import { Card } from 'react-daisyui'
 import { motion } from 'framer-motion'
 
-import useChildren from '@/hooks/useChildren'
-
-const ResumeCard = ({children, minCardSize}: {
-  children: Readonly<React.ReactNode>,
+const ResumeCard = ({title, subtitle, duration, children, minCardSize}: {
+  title: string,
+  subtitle: string,
+  duration: string,
+  children?: Readonly<React.ReactNode>,
   minCardSize?: number
 }) => {
-  const title = useChildren(children, 'Title');
-  const subtitle = useChildren(children, 'Subtitle');
-  const content = useChildren(children, 'Content');
-  const duration = useChildren(children, 'Duration');
-
   const minH = `min-h-${minCardSize}`;
     
   return (
@@ -33,20 +29,10 @@ const ResumeCard = ({children, minCardSize}: {
         <h3 className='text-xl'>{subtitle}</h3>
         <h2 className='text-xl sm:hidden mt-4'>{duration}</h2>
         <br/>
-        <p>{content}</p>
+        <p>{children}</p>
       </Card.Body>
     </motion.div>
   )
 }
-
-const Title = ({children}: {children: Readonly<React.ReactNode>}) => <>{children}</>;
-const Subtitle = ({children}: {children: Readonly<React.ReactNode>}) => <>{children}</>;
-const Content = ({children}: {children: Readonly<React.ReactNode>}) => <>{children}</>;
-const Duration = ({children}: {children: Readonly<React.ReactNode>}) => <>{children}</>;
-
-ResumeCard.Title = Title;
-ResumeCard.Subtitle = Subtitle;
-ResumeCard.Content = Content;
-ResumeCard.Duration = Duration;
 
 export default ResumeCard;

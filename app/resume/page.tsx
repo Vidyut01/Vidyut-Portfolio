@@ -4,9 +4,10 @@ import React from 'react'
 import { Fugaz_One } from 'next/font/google';
 
 import { motion } from 'framer-motion'
-import { Card } from 'react-daisyui';
+import { Button, Card } from 'react-daisyui';
 
-import ResumeCard, { Divider } from '^/ResumeCard';
+import ResumeCard from '^/ResumeCard';
+import { BsDownload } from 'react-icons/bs';
 
 const headingFont = Fugaz_One({
     weight: '400',
@@ -33,22 +34,22 @@ const Resume = () => {
           <h2 className={`text-3xl ${headingFont.className}`}>Experience:</h2>
           <hr className='my-3 border-black rounded-full' />
           <div className='flex flex-wrap justify-between text-[#2e2e2e]'>
-            <ResumeCard minCardSize={52}>
-              <ResumeCard.Title>Website Administrator</ResumeCard.Title>
-              <ResumeCard.Subtitle>RMIT Information Security Collective</ResumeCard.Subtitle>
-              <ResumeCard.Duration>Dec 2023 - Present</ResumeCard.Duration>
-              <ResumeCard.Content>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta vero ea delectus beatae sint, magni aliquid velit doloremque voluptatum eos expedita tempora laborum magnam illo quam alias modi explicabo harum?.
-              </ResumeCard.Content>
+            <ResumeCard
+              title='Website Administrator'
+              subtitle='RMIT Information Security Collective'
+              duration='Dec 2023 - Present'
+              minCardSize={48}
+            >
+              Worked with fellow club members to gather requimrents and build a club website and maintain it.
             </ResumeCard>
 
-            <ResumeCard minCardSize={52}>
-              <ResumeCard.Title>Website Administrator</ResumeCard.Title>
-              <ResumeCard.Subtitle>RMIT Information Security Collective</ResumeCard.Subtitle>
-              <ResumeCard.Duration>Dec 2023 - Present</ResumeCard.Duration>
-              <ResumeCard.Content>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id repellendus maiores quae dolores odit perspiciatis praesentium, tempore aut totam quas rem, libero hic nulla saepe modi. Ipsum suscipit minus obcaecati.
-              </ResumeCard.Content>
+            <ResumeCard
+              title='Team Member'
+              subtitle='RMIT Google Develeper Student Clubs'
+              duration='Mar 2024 - Present'
+              minCardSize={48}
+            >
+              Collaborate with team of volunteers to plan, organize, and execute various events aimed at individuals with varying levels of technical expertise
             </ResumeCard>
           </div>
         </section>
@@ -59,11 +60,11 @@ const Resume = () => {
           <h2 className={`text-3xl ${headingFont.className}`}>Education:</h2>
           <hr className='my-3 border-black rounded-full' />
           <div className='flex flex-wrap justify-between text-[#2e2e2e]'>
-            <ResumeCard>
-              <ResumeCard.Title>RMIT University</ResumeCard.Title>
-              <ResumeCard.Subtitle>Bachelor of Software Engineering</ResumeCard.Subtitle>
-              <ResumeCard.Duration>Feb 2022 - Nov 2025</ResumeCard.Duration>
-            </ResumeCard>
+            <ResumeCard
+              title='RMIT University'
+              subtitle='Bachelor of Software Engineering'
+              duration='Feb 2022 - Nov 2025'
+            />
           </div>
         </section>
 
@@ -73,6 +74,12 @@ const Resume = () => {
           <h2 className={`text-3xl ${headingFont.className}`}>My Skills:</h2>
           <hr className='my-3 border-black rounded-full' />
         </section>
+
+        <br/>
+
+        <Button className='bg-slate-800 rounded-full p-4 text-white'>
+          <BsDownload className='inline mr-1' /> Download Resume
+        </Button>
       </main>
     </div>
   )
