@@ -40,7 +40,7 @@ const Navbar = () => {
   }, [isTransparent]);
 
   return (
-    <nav className={`z-50 h-16 fixed top-0 w-full flex px-32 items-center justify-between ${isTransparent ? 'bg-transparent' :' bg-[#e2e2e2]'} transition duration-200 animate-fade-nav`}>
+    <nav className={`z-50 h-16 fixed top-0 w-full flex px-32 items-center justify-between ${isTransparent ? 'bg-transparent' :' bg-[#1f1d1d]'} transition duration-200 animate-fade-nav`}>
         <h1 className="text-3xl font-bold w-full text-center lg:text-left">
           <Link href={'/'} className={headingFont.className}>
             Vidyut

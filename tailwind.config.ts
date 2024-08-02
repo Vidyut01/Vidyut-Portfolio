@@ -19,6 +19,7 @@ const config: Config = {
         "fade-header-mobile-fig": 'fadeIn-mobile-fig 1s ease-in-out',
         "fade-header-mobile-text": 'fadeIn-mobile-text 1s ease-in-out',
         "fade-nav": 'fadeInNav 1s ease-in-out',
+        "fade-bg": 'fadeBg 1s ease-in'
       },
 
       keyframes: {
@@ -38,6 +39,10 @@ const config: Config = {
 					from: { opacity: '0', "margin-top": '-50px' },
 					to: { opacity: '1', "margin-top": '0' },
 				},
+        fadeBg: {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
       },
     },
   },

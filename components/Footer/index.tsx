@@ -3,7 +3,7 @@ import { FaLinkedin } from "react-icons/fa"
 
 const Footer = () => {
   return (
-    <div className="bg-gray-400 w-full grid place-items-center py-3 text-gray-800">
+    <div className="w-full grid place-items-center py-3">
         <div className="flex mb-2">
             <a href="https://github.com/Vidyut01"><AiFillGithub size={30} className="mr-5" /></a>
             <a href="https://www.linkedin.com/in/vidyut-venkatesan"><FaLinkedin size={30} /></a>
