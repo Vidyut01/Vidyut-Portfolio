@@ -1,0 +1,36 @@
+[
+    {
+        "type": "Web Development",
+        "skills": [
+            {
+                "icon": "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png",
+                "alt": "vercel icon"
+            },
+            {
+                "icon": "/vercel.svg",
+                "alt": "vercel icon"
+            },
+            {
+                "icon": "/vercel.svg",
+                "alt": "vercel icon"
+            }
+        ]
+    },
+    {
+        "type": "Web Development 2.0",
+        "skills": [
+            {
+                "icon": "/vercel.svg",
+                "alt": "vercel icon"
+            },
+            {
+                "icon": "/vercel.svg",
+                "alt": "vercel icon"
+            },
+            {
+                "icon": "/vercel.svg",
+                "alt": "vercel icon"
+            }
+        ]
+    }
+]

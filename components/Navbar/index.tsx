@@ -50,10 +50,9 @@ const Navbar = () => {
           <code className="text-2xl hidden min-[1200px]:inline"> {currentRoute != '/' && currentRoute}</code>
         </h1>
         <aside className="min-[940px]:flex hidden">
-            <NavItem name="Home" href="/" />
-            <NavItem name="Projects" href="/projects" />
-            <NavItem name="Resume" href="/resume" />
-            <NavItem name="Contact" href="/contact" />
+            <NavItem name="Projects" href="#projects" />
+            <NavItem name="Experience" href="#experience" />
+            <NavItem name="Contact" href="#contact" />
         </aside>
         <IoMenu size={30} className="min-[940px]:hidden hover:cursor-pointer absolute right-5 top-5" onClick={() => setIsModalOpen(true)} />
         <div className="min-[940px]:hidden">

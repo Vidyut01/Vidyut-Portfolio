@@ -3,6 +3,12 @@ import Image from "next/image";
 import Section from "^/Section";
 import BGParticles from "^/Particles";
 import Experience from "^/Experience";
+import ResumeCard from "^/ResumeCard";
+
+import resumeData from '@/json/resume.json';
+import projects from '@/json/projects.json';
+import Skills from "^/Skills";
+import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Home() {
   
@@ -48,6 +54,101 @@ export default function Home() {
       >
         <Experience />
       </Section>
+
+
+      <Section
+        id="projects"
+        title="Projects"
+        className="h-[1000px]"
+      >
+        <div className="px-10 w-full">
+          {projects.map((e, i) => 
+            <ResumeCard
+              key={i}
+              title={e.title}
+            >
+              <div className="text-xl">
+                {e.content}
+              </div>
+              <br/>
+              <div className="text-lg italic">
+                Tech Stack: {e.stack}
+              </div>
+            </ResumeCard>
+          )}
+        </div>
+      </Section>
+        
+      
+      <Section
+        id="skils"
+        title="Skills"
+        className="h-96"
+        reverse
+      >
+        <Skills />
+      </Section>
+
+      <Section
+        id="education"
+        title="Education"
+        className="h-96"
+      >
+        <div className="px-10 w-full">
+          {resumeData.education.map((e, i) => 
+            <ResumeCard
+              key={i}
+              title={e.title}
+              subtitle={e.subtitle}
+              duration={e.duration}
+            />
+          )}
+        </div>
+      </Section>
+
+      <Section
+        id="contact"
+        title="Contact"
+        className="h-96"
+        reverse
+      >
+        <div className="flex justify-between w-full px-10">
+          <a
+            href="mailto:vidyut0903@gmail.com"
+            className="w-[30%] h-52 flex flex-col shadow-xl rounded bg-[#1e1e1eaa] hover:bg-[#1e1e1e] transition justify-evenly items-center gap-3"
+          >
+            <div className="flex flex-col justify-center items-center gap-3">
+              <Image src={"/Gmail_Logo.png"} alt="gmail logo" width={75} height={75} />
+              <p className="text-xl">E-Mail</p>
+            </div>
+            <code className="text-blue-400 text-lg">vidyut0903@gmail.com</code>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/vidyut-venkatesan"
+            className="w-[30%] h-52 flex flex-col shadow-xl rounded bg-[#1e1e1eaa] hover:bg-[#1e1e1e] transition justify-center items-center gap-3"
+          >
+            <div className="flex flex-col justify-center items-center gap-3">
+              <Image src={"/linkedin.png"} alt="gmail logo" width={75} height={75} />
+              <p className="text-xl">LinkedIn</p>
+            </div>
+            <code className="text-blue-400 text-lg">Vidyut Venkatesan</code>
+          </a>
+
+          <a
+            href="tel:+61422484636"
+            className="w-[30%] h-52 flex flex-col shadow-xl rounded bg-[#1e1e1eaa] hover:bg-[#1e1e1e] transition justify-center items-center gap-3"
+          >
+            <div className="flex flex-col justify-center items-center gap-3">
+              <FaPhoneAlt size={75} />
+              <p className="text-xl">Phone</p>
+            </div>
+            <code className="text-blue-400 text-lg">+61 422484636</code>
+          </a>
+
+        </div>
+      </Section>
+      
     </div>
   );
 }
