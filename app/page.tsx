@@ -37,29 +37,30 @@ export default function Home() {
       <Section
         id="about"
         title="About"
-        className="h-96"
+        className="h-96 section"
       >
         <h2 className={`text-[3rem] text-center`}>Who am I ?</h2>
         <br/>
         <p className="text-xl max-w-[80%]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae beatae iusto eligendi odit dolore aut quasi consequuntur reiciendis, at hic incidunt odio cumque assumenda iste fuga quibusdam a voluptatibus in?</p>
       </Section>
 
-      <br/>
+      <div className="h-24"></div>
 
       <Section
         id="experience"
         title="Experience"
-        className="h-96"
+        className="h-[30rem] section"
         reverse
       >
         <Experience />
       </Section>
 
-
+      <div className="h-24"></div>
+      
       <Section
         id="projects"
         title="Projects"
-        className="h-[1000px]"
+        className="h-[1000px] section"
       >
         <div className="px-10 w-full">
           {projects.map((e, i) => 
@@ -79,20 +80,23 @@ export default function Home() {
         </div>
       </Section>
         
-      
+      <div className="h-24"></div>
+
       <Section
-        id="skils"
+        id="skills"
         title="Skills"
-        className="h-96"
+        className="h-[30rem] section"
         reverse
       >
         <Skills />
       </Section>
+      
+      <div className="h-24"></div>
 
       <Section
         id="education"
         title="Education"
-        className="h-96"
+        className="h-[30rem] section"
       >
         <div className="px-10 w-full">
           {resumeData.education.map((e, i) => 
@@ -105,11 +109,13 @@ export default function Home() {
           )}
         </div>
       </Section>
-
+      
+      <div className="h-24"></div>
+      
       <Section
         id="contact"
         title="Contact"
-        className="h-96"
+        className="h-[30rem] section"
         reverse
       >
         <div className="flex justify-between w-full px-10">
@@ -117,11 +123,11 @@ export default function Home() {
             href="mailto:vidyut0903@gmail.com"
             className="w-[30%] h-52 flex flex-col shadow-xl rounded bg-[#1e1e1eaa] hover:bg-[#1e1e1e] transition justify-evenly items-center gap-3"
           >
-            <div className="flex flex-col justify-center items-center gap-3">
-              <Image src={"/Gmail_Logo.png"} alt="gmail logo" width={75} height={75} />
+            <div className="flex flex-col justify-center items-center gap-3 pt-5">
+              <Image src={"/Gmail_Logo.png"} alt="gmail logo" width={75} height={75} className="" />
               <p className="text-xl">E-Mail</p>
             </div>
-            <code className="text-blue-400 text-lg">vidyut0903@gmail.com</code>
+            <code className="text-blue-400 text-lg -mt-5">vidyut0903@gmail.com</code>
           </a>
 
           <a

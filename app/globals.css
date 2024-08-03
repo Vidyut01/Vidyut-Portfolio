@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #121212;
   color: #E6E6FA;
@@ -18,4 +22,9 @@ code {
   top: 0;
   left: 0;
   z-index: -100;
+}
+
+.section {
+  padding-top: 64px; 
+  margin-top: -64px;
 }

@@ -10,6 +10,7 @@ import { IoMenu } from "react-icons/io5"
 
 import NavItem from "./NavItem"
 import MobileNavModal from "./MobileNavModal"
+import { AiFillGithub } from "react-icons/ai"
 
 
 const headingFont = Fugaz_One({
@@ -42,17 +43,20 @@ const Navbar = () => {
   return (
     <nav className={`z-50 h-16 fixed top-0 w-full flex px-32 items-center justify-between ${isTransparent ? 'bg-transparent' :' bg-[#1f1d1d]'} transition duration-200 animate-fade-nav`}>
         <h1 className="text-3xl font-bold w-full text-center lg:text-left">
-          <Link href={'/'} className={headingFont.className}>
+          <a href="#" className={headingFont.className}>
             Vidyut
             <span className="hidden sm:inline"> Venkatesan</span>
             <span className="sm:hidden"> V.</span>
-          </Link>
+          </a>
           <code className="text-2xl hidden min-[1200px]:inline"> {currentRoute != '/' && currentRoute}</code>
         </h1>
-        <aside className="min-[940px]:flex hidden">
-            <NavItem name="Projects" href="#projects" />
+        <aside className="min-[940px]:flex hidden items-center">
             <NavItem name="Experience" href="#experience" />
+            <NavItem name="Projects" href="#projects" />
+            <NavItem name="Skills" href="#skills" />
+            <NavItem name="Education" href="#education" />
             <NavItem name="Contact" href="#contact" />
+            <a href="https://github.com/Vidyut01"><AiFillGithub size={30} className="ml-5" /></a>
         </aside>
         <IoMenu size={30} className="min-[940px]:hidden hover:cursor-pointer absolute right-5 top-5" onClick={() => setIsModalOpen(true)} />
         <div className="min-[940px]:hidden">
