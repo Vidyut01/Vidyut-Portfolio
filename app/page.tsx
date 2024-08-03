@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import Section from "^/Section";
 import BGParticles from "^/Particles";
+import Experience from "^/Experience";
 
 export default function Home() {
   
@@ -37,15 +38,15 @@ export default function Home() {
         <p className="text-xl max-w-[80%]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae beatae iusto eligendi odit dolore aut quasi consequuntur reiciendis, at hic incidunt odio cumque assumenda iste fuga quibusdam a voluptatibus in?</p>
       </Section>
 
+      <br/>
 
       <Section
         id="experience"
         title="Experience"
         className="h-96"
+        reverse
       >
-        <div>
-
-        </div>
+        <Experience />
       </Section>
     </div>
   );

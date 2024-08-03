@@ -19,6 +19,10 @@ const BGParticles = () => {
     },
     interactivity: {
       events: {
+        onClick: {
+          enable: true,
+          mode: "explode"
+        },
         onHover: {
           enable: true,
           mode: "repulse",
@@ -38,6 +42,9 @@ const BGParticles = () => {
         repulse: {
           distance: 200,
           duration: 0.4,
+        },
+        explode: {
+          quantity: 10,
         },
       },
     },

@@ -41,7 +41,6 @@ const Resume = () => {
                 title={e.title}
                 subtitle={e.subtitle}
                 duration={e.duration}
-                minCardSize={48}
               >
                 {e.content}
               </ResumeCard>

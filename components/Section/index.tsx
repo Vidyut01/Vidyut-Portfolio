@@ -14,11 +14,12 @@ const headingFont = Fugaz_One({
   subsets: ['latin'],
 });
 
-const Section = ({id, title, children, className}: {
+const Section = ({id, title, children, className, reverse = false}: {
     id: string;
     title: string;
     children: React.ReactNode;
     className?: string;
+    reverse?: boolean;
 }) => {
   return (
     <section id={id} className={`flex flex-col items-center lg:flex-row lg:items-start justify-between overflow-hidden px-12 lg:px-32 mb-10 w-full ${className}`}>
@@ -29,12 +30,15 @@ const Section = ({id, title, children, className}: {
         viewport={{ once: true }}
         transition={{ duration: .75 }}
       >
-        <div className={`text-4xl w-[30%] h-full border-r border-[#E6E6FA] ${headingFont.className}`}>
+        {!reverse && <div className={`text-5xl w-[30%] h-full border-r grid place-items-center border-[#E6E6FA] ${headingFont.className}`}>
           {title}
-        </div>
+        </div>}
         <div className="flex flex-col items-center w-[70%]">
           {children}
         </div>
+        {reverse && <div className={`text-5xl w-[30%] h-full border-l grid place-items-center border-[#E6E6FA] ${headingFont.className}`}>
+          {title}
+        </div>}
       </motion.article>
     </section>
   )
