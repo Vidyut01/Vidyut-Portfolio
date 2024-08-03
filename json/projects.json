@@ -1,22 +1,22 @@
 [
     {
         "title": "Project 1",
-        "content": "lorem ipsum",
+        "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae beatae iusto eligendi odit dolore aut quasi consequuntur reiciendis, at hic incidunt odio cumque assumenda iste fuga quibusdam a voluptatibus in?",
         "stack": "React"
     },
     {
         "title": "Project 2",
-        "content": "lorem ipsum",
+        "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae beatae iusto eligendi odit dolore aut quasi consequuntur reiciendis, at hic incidunt odio cumque assumenda iste fuga quibusdam a voluptatibus in?",
         "stack": "React"
     },
     {
         "title": "Project 3",
-        "content": "lorem ipsum",
+        "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae beatae iusto eligendi odit dolore aut quasi consequuntur reiciendis, at hic incidunt odio cumque assumenda iste fuga quibusdam a voluptatibus in?",
         "stack": "React"
     },
     {
         "title": "Project 4",
-        "content": "lorem ipsum",
+        "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae beatae iusto eligendi odit dolore aut quasi consequuntur reiciendis, at hic incidunt odio cumque assumenda iste fuga quibusdam a voluptatibus in?",
         "stack": "React"
     }
 ]

@@ -16,6 +16,7 @@ const Skills = () => {
                 </div>
             </div>
         ))}
+        <p className='text-2xl w-full text-center mt-10'>And More!</p>
     </div>
   )
 }

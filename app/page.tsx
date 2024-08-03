@@ -63,7 +63,7 @@ export default function Home() {
         className="h-[1000px] section"
       >
         <div className="px-10 w-full">
-          {projects.map((e, i) => 
+          {projects.slice(0,3).map((e, i) => 
             <ResumeCard
               key={i}
               title={e.title}
@@ -85,7 +85,7 @@ export default function Home() {
       <Section
         id="skills"
         title="Skills"
-        className="h-[30rem] section"
+        className="h-[55rem] section"
         reverse
       >
         <Skills />
@@ -96,7 +96,7 @@ export default function Home() {
       <Section
         id="education"
         title="Education"
-        className="h-[30rem] section"
+        className="h-[20rem] section"
       >
         <div className="px-10 w-full">
           {resumeData.education.map((e, i) => 
