@@ -12,6 +12,8 @@ import MobileNavModal from "./MobileNavModal"
 import { AiFillGithub } from "react-icons/ai"
 import { Twirl as Hamburger } from "hamburger-react"
 
+import { github } from '@/json/contact.json';
+
 
 const headingFont = Fugaz_One({
   weight: '400',
@@ -56,10 +58,10 @@ const Navbar = () => {
             <NavItem name="Skills" href="#skills" />
             <NavItem name="Education" href="#education" />
             <NavItem name="Contact" href="#contact" />
-            <a href="https://github.com/Vidyut01"><AiFillGithub size={30} className="ml-5" /></a>
+            <a href={github.link}><AiFillGithub size={30} className="ml-5" /></a>
         </aside>
         <span className="min-[1030px]:hidden hover:cursor-pointer absolute right-5 top-1.5 flex items-center gap-2">
-          <a href="https://github.com/Vidyut01"><AiFillGithub size={30} className="ml-5" /></a>
+          <a href={github.link}><AiFillGithub size={30} className="ml-5" /></a>
           <Hamburger toggled={isModalOpen} toggle={setIsModalOpen} size={25} />
         </span>
         <div className="min-[1030px]:hidden">

@@ -32,11 +32,11 @@ const Projects = () => {
         {projectData.map((p, i) => 
           <>
           {i % 2 === 0 ? 
-          <LeftSidePopUp title={p.title} image={p.image}>
+          <LeftSidePopUp title={p.title} image={p.stack}>
             {p.content}
           </LeftSidePopUp>
           : 
-          <RightSidePopUp title={p.title} image={p.image}>
+          <RightSidePopUp title={p.title} image={p.content}>
             {p.content}
           </RightSidePopUp>
           }

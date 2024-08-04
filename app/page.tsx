@@ -9,6 +9,7 @@ import Skills from "^/Skills";
 
 import resumeData from '@/json/resume.json';
 import projects from '@/json/projects.json';
+import contact from '@/json/contact.json';
 
 export default function Home() {
   return (
@@ -117,36 +118,36 @@ export default function Home() {
       >
         <div className="flex lg:justify-between justify-center w-full lg:px-10 flex-wrap gap-10 lg:gap-0">
           <a
-            href="mailto:vidyut0903@gmail.com"
+            href={`mailto:${contact.email.link}`}
             className="lg:w-[30%] w-[100%] h-52 flex flex-col shadow-xl rounded bg-[#1e1e1eaa] hover:bg-[#1e1e1e] transition justify-evenly items-center gap-3"
           >
             <div className="flex flex-col justify-center items-center gap-3 pt-5">
               <Image src={"/Gmail_Logo.png"} alt="gmail logo" width={75} height={75} className="" />
               <p className="text-xl">E-Mail</p>
             </div>
-            <code className="text-blue-400 text-lg -mt-5">vidyut0903@gmail.com</code>
+            <code className="text-blue-400 text-lg -mt-5">{contact.email.display}</code>
           </a>
 
           <a
-            href="https://www.linkedin.com/in/vidyut-venkatesan"
+            href={contact.linkedin.link}
             className="lg:w-[30%] w-[100%] h-52 flex flex-col shadow-xl rounded bg-[#1e1e1eaa] hover:bg-[#1e1e1e] transition justify-center items-center gap-3"
           >
             <div className="flex flex-col justify-center items-center gap-3">
               <Image src={"/linkedin.png"} alt="gmail logo" width={75} height={75} />
               <p className="text-xl">LinkedIn</p>
             </div>
-            <code className="text-blue-400 text-lg">Vidyut Venkatesan</code>
+            <code className="text-blue-400 text-lg">{contact.linkedin.display}</code>
           </a>
 
           <a
-            href="tel:+61422484636"
+            href={`tel:${contact.phone.link}`}
             className="lg:w-[30%] w-[100%] h-52 flex flex-col shadow-xl rounded bg-[#1e1e1eaa] hover:bg-[#1e1e1e] transition justify-center items-center gap-3"
           >
             <div className="flex flex-col justify-center items-center gap-3">
               <FaPhoneAlt size={75} />
               <p className="text-xl">Phone</p>
             </div>
-            <code className="text-blue-400 text-lg">+61 422484636</code>
+            <code className="text-blue-400 text-lg">{contact.phone.display}</code>
           </a>
 
         </div>
