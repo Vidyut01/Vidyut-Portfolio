@@ -12,7 +12,7 @@ import MobileNavModal from "./MobileNavModal"
 import { AiFillGithub } from "react-icons/ai"
 import { Twirl as Hamburger } from "hamburger-react"
 
-import { github } from '@/json/contact.json';
+import contact from '@/json/contact.json';
 
 
 const headingFont = Fugaz_One({
@@ -50,7 +50,6 @@ const Navbar = () => {
             <span className="hidden sm:inline"> Venkatesan</span>
             <span className="sm:hidden"> V.</span>
           </a>
-          <code className="text-2xl hidden min-[1200px]:inline"> {currentRoute != '/' && currentRoute}</code>
         </h1>
         <aside className="min-[1030px]:flex hidden items-center">
             <NavItem name="Experience" href="#experience" />
@@ -58,10 +57,10 @@ const Navbar = () => {
             <NavItem name="Skills" href="#skills" />
             <NavItem name="Education" href="#education" />
             <NavItem name="Contact" href="#contact" />
-            <a href={github.link}><AiFillGithub size={30} className="ml-5" /></a>
+            <a href={contact.github.link}><AiFillGithub size={30} className="ml-5" /></a>
         </aside>
         <span className="min-[1030px]:hidden hover:cursor-pointer absolute right-5 top-1.5 flex items-center gap-2">
-          <a href={github.link}><AiFillGithub size={30} className="ml-5" /></a>
+          <a href={contact.github.link}><AiFillGithub size={30} className="ml-5" /></a>
           <Hamburger toggled={isModalOpen} toggle={setIsModalOpen} size={25} />
         </span>
         <div className="min-[1030px]:hidden">
