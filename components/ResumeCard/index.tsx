@@ -12,7 +12,7 @@ const ResumeCard = ({title, subtitle, duration, children}: {
 }) => {    
   return (
     <div 
-      className={`w-full p-5 rounded-lg mb-5 h-fit`}
+      className={`w-full lg:p-5 rounded-lg mb-5 h-fit`}
     >
       <Card.Body className='w-full'>
         <Card.Title className='text-xl flex justify-between items-center w-full'>

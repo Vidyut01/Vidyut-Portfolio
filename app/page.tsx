@@ -1,17 +1,16 @@
 import Image from "next/image";
+import { FaPhoneAlt } from "react-icons/fa";
 
 import Section from "^/Section";
 import BGParticles from "^/Particles";
 import Experience from "^/Experience";
 import ResumeCard from "^/ResumeCard";
+import Skills from "^/Skills";
 
 import resumeData from '@/json/resume.json';
 import projects from '@/json/projects.json';
-import Skills from "^/Skills";
-import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Home() {
-  
   return (
     <div className="w-full">
       <BGParticles />
@@ -37,10 +36,8 @@ export default function Home() {
       <Section
         id="about"
         title="About"
-        className="h-96 section"
+        className="lg:h-96 section"
       >
-        <h2 className={`text-[3rem] text-center`}>Who am I ?</h2>
-        <br/>
         <p className="text-xl max-w-[80%]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae beatae iusto eligendi odit dolore aut quasi consequuntur reiciendis, at hic incidunt odio cumque assumenda iste fuga quibusdam a voluptatibus in?</p>
       </Section>
 
@@ -49,7 +46,7 @@ export default function Home() {
       <Section
         id="experience"
         title="Experience"
-        className="h-[30rem] section"
+        className="lg:h-[30rem] -mb-20 lg:mb-0 section"
         reverse
       >
         <Experience />
@@ -60,9 +57,9 @@ export default function Home() {
       <Section
         id="projects"
         title="Projects"
-        className="h-[1000px] section"
+        className="lg:h-[1000px] -mb-20 lg:mb-0 section"
       >
-        <div className="px-10 w-full">
+        <div className="lg:px-10 w-full">
           {projects.slice(0,3).map((e, i) => 
             <ResumeCard
               key={i}
@@ -85,7 +82,7 @@ export default function Home() {
       <Section
         id="skills"
         title="Skills"
-        className="h-[55rem] section"
+        className="lg:h-[55rem] -mb-20 lg:mb-0 section"
         reverse
       >
         <Skills />
@@ -96,9 +93,9 @@ export default function Home() {
       <Section
         id="education"
         title="Education"
-        className="h-[20rem] section"
+        className="lg:h-[20rem] -mb-20 lg:mb-0 section"
       >
-        <div className="px-10 w-full">
+        <div className="lg:px-10 w-full">
           {resumeData.education.map((e, i) => 
             <ResumeCard
               key={i}
@@ -115,13 +112,13 @@ export default function Home() {
       <Section
         id="contact"
         title="Contact"
-        className="h-[30rem] section"
+        className="lg:h-[30rem] section"
         reverse
       >
-        <div className="flex justify-between w-full px-10">
+        <div className="flex lg:justify-between justify-center w-full lg:px-10 flex-wrap gap-10 lg:gap-0">
           <a
             href="mailto:vidyut0903@gmail.com"
-            className="w-[30%] h-52 flex flex-col shadow-xl rounded bg-[#1e1e1eaa] hover:bg-[#1e1e1e] transition justify-evenly items-center gap-3"
+            className="lg:w-[30%] w-[100%] h-52 flex flex-col shadow-xl rounded bg-[#1e1e1eaa] hover:bg-[#1e1e1e] transition justify-evenly items-center gap-3"
           >
             <div className="flex flex-col justify-center items-center gap-3 pt-5">
               <Image src={"/Gmail_Logo.png"} alt="gmail logo" width={75} height={75} className="" />
@@ -132,7 +129,7 @@ export default function Home() {
 
           <a
             href="https://www.linkedin.com/in/vidyut-venkatesan"
-            className="w-[30%] h-52 flex flex-col shadow-xl rounded bg-[#1e1e1eaa] hover:bg-[#1e1e1e] transition justify-center items-center gap-3"
+            className="lg:w-[30%] w-[100%] h-52 flex flex-col shadow-xl rounded bg-[#1e1e1eaa] hover:bg-[#1e1e1e] transition justify-center items-center gap-3"
           >
             <div className="flex flex-col justify-center items-center gap-3">
               <Image src={"/linkedin.png"} alt="gmail logo" width={75} height={75} />
@@ -143,7 +140,7 @@ export default function Home() {
 
           <a
             href="tel:+61422484636"
-            className="w-[30%] h-52 flex flex-col shadow-xl rounded bg-[#1e1e1eaa] hover:bg-[#1e1e1e] transition justify-center items-center gap-3"
+            className="lg:w-[30%] w-[100%] h-52 flex flex-col shadow-xl rounded bg-[#1e1e1eaa] hover:bg-[#1e1e1e] transition justify-center items-center gap-3"
           >
             <div className="flex flex-col justify-center items-center gap-3">
               <FaPhoneAlt size={75} />
