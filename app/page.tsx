@@ -22,7 +22,7 @@ export default function Home() {
       <header className="flex w-full h-screen flex-col lg:flex-row">
         <div className="h-16 lg:h-0"></div>
         <figure className="w-full mt-[10%] lg:mt-0 lg:h-auto grid lg:items-center lg:justify-end justify-center items-end animate-fade-header-mobile-fig lg:animate-fade-header">
-          <Image src="/portrait.jpeg" alt="profile_image" className="rounded-full w-[300px] min-[400px]:w-[350px] lg:w-[400px] h-auto" width={400} height={400} />
+          <Image src="/portrait.png" alt="profile_image" className="rounded-full w-[300px] min-[400px]:w-[350px] lg:w-[400px] h-auto" width={400} height={400} />
         </figure>
         <span className="mx-20" />
         <div className="w-full h-auto grid lg:items-center lg:justify-normal justify-center animate-fade-header-mobile-text lg:animate-fade-header pt-20 lg:pt-0">
