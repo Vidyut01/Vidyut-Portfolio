@@ -10,6 +10,7 @@ import Skills from "^/Skills";
 import resumeData from '@/json/resume.json';
 import projects from '@/json/projects.json';
 import contact from '@/json/contact.json';
+import { AiFillGithub } from "react-icons/ai";
 
 export default function Home() {
   return (
@@ -58,7 +59,7 @@ export default function Home() {
       <Section
         id="projects"
         title="Projects"
-        className="lg:h-[1000px] -mb-20 lg:mb-0 section"
+        className="lg:h-[1050px] -mb-20 lg:mb-0 section"
       >
         <div className="lg:px-10 w-full">
           {projects.slice(0,3).map((e, i) => 
@@ -71,8 +72,10 @@ export default function Home() {
               </div>
               <br/>
               <div className="text-lg italic">
-                Tech Stack: {e.stack}
+                <b>Technologies Used:</b> {e.stack}
               </div>
+              <br/>
+              {e.repo && <a href={e.repo}><AiFillGithub size={35} /></a>}
             </ResumeCard>
           )}
         </div>

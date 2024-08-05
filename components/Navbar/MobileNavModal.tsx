@@ -18,14 +18,14 @@ const MobileNavModal = ({
   return (
     <motion.div
       onClick={e => {e.stopPropagation(); closeHandler(false)}}
-      className="z-[-10] fixed top-0 left-0 w-screen  h-screen pb-[27rem]"
+      className="z-[-10] fixed top-0 left-0 w-screen h-screen"
       initial={{ y: '-100vh', opacity: 0 }}
       animate={{ y: '0', opacity: 1 }}
       exit={{ y: '-100vh', opacity: 0 }}
       transition={{ duration: .3 }}
     >
       <div 
-        className='bg-[#1f1d1d] flex flex-col items-center justify-center h-full'
+        className='bg-[#1f1d1d] flex flex-col items-center justify-center h-[60%]'
         onClick={e => e.stopPropagation()}
       >
         <NavItem name="Experience" href="#experience" className='my-5' onClick={() => {closeHandler(false)}} />
