@@ -45,10 +45,10 @@ const Navbar = () => {
   return (
     <nav className={`z-50 h-16 fixed top-0 w-full flex px-32 items-center justify-between ${isTransparent ? 'bg-transparent' :' bg-[#1f1d1d]'} transition duration-200 animate-fade-nav`}>
         <h1 className="text-3xl font-bold w-full text-center min-[1030px]:text-left">
-          <a href="#" className={headingFont.className} onClick={() => setIsModalOpen(false)}>
+          <a href="#" className={`max-[390px]:text-2xl max-[320px]:text-lg ${headingFont.className}`} onClick={() => setIsModalOpen(false)}>
             Vidyut
             <span className="hidden sm:inline"> Venkatesan</span>
-            <span className="sm:hidden"> V.</span>
+            <span className="sm:hidden max-[363px]:hidden"> V.</span>
           </a>
         </h1>
         <aside className="min-[1030px]:flex hidden items-center">

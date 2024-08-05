@@ -25,7 +25,7 @@ const MobileNavModal = ({
       transition={{ duration: .3 }}
     >
       <div 
-        className='bg-[#1f1d1d] flex flex-col items-center justify-center h-[60%]'
+        className='bg-[#1f1d1d] flex flex-col items-center justify-center h-[60%] max-[390px]:h-[70%]'
         onClick={e => e.stopPropagation()}
       >
         <NavItem name="Experience" href="#experience" className='my-5' onClick={() => {closeHandler(false)}} />

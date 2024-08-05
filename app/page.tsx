@@ -42,7 +42,7 @@ export default function Home() {
         title="About"
         className="lg:h-96 section"
       >
-        <p className="text-[21px] max-w-[80%] text-justify">
+        <p className="text-lg lg:text-[21px] lg:max-w-[80%] lg:text-justify">
           {about.about}
           <br/>
           <a
@@ -140,7 +140,7 @@ export default function Home() {
               <Image src={"/Gmail_Logo.png"} alt="gmail logo" width={75} height={75} className="" />
               <p className="text-xl">E-Mail</p>
             </div>
-            <code className="text-blue-400 text-lg -mt-5">{contact.email.display}</code>
+            <code className="text-blue-400 text-lg -mt-5 contactLink">{contact.email.display}</code>
           </a>
 
           <a
@@ -151,7 +151,7 @@ export default function Home() {
               <Image src={"/linkedin.png"} alt="gmail logo" width={75} height={75} />
               <p className="text-xl">LinkedIn</p>
             </div>
-            <code className="text-blue-400 text-lg">{contact.linkedin.display}</code>
+            <code className="text-blue-400 text-lg contactLink">{contact.linkedin.display}</code>
           </a>
 
           <a
@@ -162,7 +162,7 @@ export default function Home() {
               <FaPhoneAlt size={75} />
               <p className="text-xl">Phone</p>
             </div>
-            <code className="text-blue-400 text-lg">{contact.phone.display}</code>
+            <code className="text-blue-400 text-lg contactLink">{contact.phone.display}</code>
           </a>
 
         </div>

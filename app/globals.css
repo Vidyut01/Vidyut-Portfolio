@@ -28,3 +28,9 @@ code {
   padding-top: 64px; 
   margin-top: -64px;
 }
+
+.contactLink {
+  @media screen and (min-width: 1024px) and (max-width: 1335px) {
+    display: none;
+  }
+}
