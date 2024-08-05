@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaPhoneAlt } from "react-icons/fa";
+import { AiFillGithub } from "react-icons/ai";
 
 import Section from "^/Section";
 import BGParticles from "^/Particles";
@@ -10,7 +11,7 @@ import Skills from "^/Skills";
 import resumeData from '@/json/resume.json';
 import projects from '@/json/projects.json';
 import contact from '@/json/contact.json';
-import { AiFillGithub } from "react-icons/ai";
+import about from '@/json/about.json';
 
 export default function Home() {
   return (
@@ -40,7 +41,9 @@ export default function Home() {
         title="About"
         className="lg:h-96 section"
       >
-        <p className="text-xl max-w-[80%]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae beatae iusto eligendi odit dolore aut quasi consequuntur reiciendis, at hic incidunt odio cumque assumenda iste fuga quibusdam a voluptatibus in?</p>
+        <p className="text-[21px] max-w-[80%] text-justify">
+          {about.about}
+        </p>
       </Section>
 
       <div className="h-24"></div>

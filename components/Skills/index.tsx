@@ -11,7 +11,15 @@ const Skills = () => {
                 <h2 className='text-2xl'>{e.type}</h2><br/>
                 <div className='flex lg:justify-evenly flex-wrap'>
                     {e.skills.slice(0, 5).map((s, ind) => 
-                        <Image src={s.icon} alt='skill icon' width={100} height={100} key={ind} className='sm:mb-0 mb-3 sm:mr-0 mr-1'/>
+                        <Image
+                            src={s.icon}
+                            alt={s.alt}
+                            width={100}
+                            height={100}
+                            key={ind}
+                            title={s.alt}
+                            className='sm:mb-0 mb-3 sm:mr-0 mr-1'
+                        />
                     )}
                 </div>
             </div>
