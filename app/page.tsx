@@ -12,6 +12,7 @@ import resumeData from '@/json/resume.json';
 import projects from '@/json/projects.json';
 import contact from '@/json/contact.json';
 import about from '@/json/about.json';
+import { TbFileDownload } from "react-icons/tb";
 
 export default function Home() {
   return (
@@ -43,6 +44,14 @@ export default function Home() {
       >
         <p className="text-[21px] max-w-[80%] text-justify">
           {about.about}
+          <br/>
+          <a
+            href="/resume/Vidyut_Resume.pdf"
+            target="_blank"
+            className="text-sm inline-block px-2 py-3 mt-5 duration-300 bg-gray-800 border-2 border-gray-700 rounded-md shadow-md hover:bg-gray-800 hover:text-blue-400 hover:border-gray-600 hover:shadow-lg active:shadow-sm"
+          >
+            <TbFileDownload size={20} className="inline align-middle" /> My Resume
+          </a>
         </p>
       </Section>
 
