@@ -16,4 +16,4 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 
 ## 🌐 Live Website
 
-Check out the live version of my portfolio [here](vidyutvenkatesan.com).
+Check out the live version of my portfolio [here](https://vidyutvenkatesan.com).
