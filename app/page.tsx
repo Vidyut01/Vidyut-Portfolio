@@ -13,6 +13,7 @@ import projects from '@/json/projects.json';
 import contact from '@/json/contact.json';
 import about from '@/json/about.json';
 import { TbFileDownload } from "react-icons/tb";
+import { BsGithub } from "react-icons/bs";
 
 export default function Home() {
   return (
@@ -155,14 +156,14 @@ export default function Home() {
           </a>
 
           <a
-            href={`tel:${contact.phone.link}`}
+            href={contact.github.link}
             className="lg:w-[30%] w-[100%] h-52 flex flex-col shadow-xl rounded bg-[#1e1e1eaa] hover:bg-[#1e1e1e] transition justify-center items-center gap-3"
           >
             <div className="flex flex-col justify-center items-center gap-3">
-              <FaPhoneAlt size={75} />
-              <p className="text-xl">Phone</p>
+              <BsGithub size={75} />
+              <p className="text-xl">GitHub</p>
             </div>
-            <code className="text-blue-400 text-lg contactLink">{contact.phone.display}</code>
+            <code className="text-blue-400 text-lg contactLink">{contact.github.display}</code>
           </a>
 
         </div>
