@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { FaPhoneAlt } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 
 import Section from "^/Section";
