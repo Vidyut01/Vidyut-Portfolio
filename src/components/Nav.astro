@@ -1,0 +1,43 @@
+<nav class="nav">
+    <a href="/" class="site-name">Vidyut Venkatesan</a>
+    <div class="nav-link-container">
+        <a href="/projects" class="nav-link">Projects</a>
+        <a href="/blog" class="nav-link">Blog</a>
+    </div>
+</nav>
+
+<style>
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-link-container {
+        font-size: larger;
+        display: flex;
+        gap: 25px;
+    }
+
+    .nav-link {
+        color: var(--color-text);
+        padding-bottom: 1px;
+        background-image: linear-gradient(transparent, transparent), linear-gradient(var(--color-accent), var(--color-accent));
+        background-size: 0 2px;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+        transition: background-size .20s ease-in-out, color .20s ease-in-out;
+    }
+
+    .nav-link:hover {
+        color: var(--color-accent);
+        background-size: 100% 2px;
+    }
+
+    .site-name {
+        font-size: x-large;
+        font-weight: bold;
+        font-family: var(--font-mono);
+        color: var(--color-text);
+    }
+</style>
