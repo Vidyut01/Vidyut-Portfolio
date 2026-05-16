@@ -1,7 +1,42 @@
 ---
+import ProjectCard from '../components/ProjectCard.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Vidyut Venkatesan">
-	
+	<h1 class="index-title">
+		Software engineer in Melbourne, working on backend systems and distributed infrastructure.
+	</h1>
+	<br />
+	<h2 class="section-label">Featured Projects</h2>
+	<section class="feat-proj-container">
+		<ProjectCard />
+		<ProjectCard />
+	</section>
 </Layout>
+
+<style>
+	.index-title {
+		font-size: 1.5rem;
+		font-family: var(--font-sans);
+		font-weight: 500;
+		line-height: 1.4;
+		max-width: 40ch;
+	}
+
+	.feat-proj-container {
+		display: flex;
+		flex-direction: column;
+		gap: 35px;
+	}
+
+	.section-label {
+		font-family: var(--font-mono);
+		font-size: 1rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: var(--color-text-dim);
+		margin: 0 0 1.5rem;
+	}
+</style>

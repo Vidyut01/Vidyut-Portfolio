@@ -1,0 +1,49 @@
+<a href="/projects/superprice" class="project-card">
+    <h3 class="project-title">SuperPrice <span class="arrow">→</span></h3>
+    <p class="project-info">React and Spring Boot grocery shopping website.</p>
+</a>
+
+<style>
+    .project-card {
+        width: fit-content;
+        display: block;
+        color: var(--color-text);
+        padding: 0.5rem 0 0.5rem 1rem;
+        margin-left: -1rem;
+        border-left: 2px solid transparent;
+        transition: border-color 0.3s ease-in-out;
+    }
+
+    .project-card:hover,
+    .project-card:focus-visible {
+        border-left-color: var(--color-accent);
+    }
+
+    .project-card:hover .project-title,
+    .project-card:focus-visible .project-title {
+        color: var(--color-accent);
+    }
+
+    .project-title {
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin: 0 0 0.4rem;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .project-info {
+        font-size: 1.1rem;
+        color: var(--color-text-muted);
+        margin: 0;
+    }
+
+    .arrow {
+        color: var(--color-text-dim);
+        transition: transform 0.2s ease;
+        display: inline-block;
+    }
+    .project-card:hover .arrow {
+        color: var(--color-accent);
+        transform: translateX(3px);
+    }
+</style>
