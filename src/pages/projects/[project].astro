@@ -1,0 +1,242 @@
+---
+export const getStaticPaths = () => {
+    return [
+        { params: { project: "superprice" } },
+    ]
+}
+
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Project Title";
+const summary = "One-line summary of the project.";
+const tech = ["Tech", "Stack", "Items"];
+const github = "https://github.com/...";  // or null
+const demo = null;  // or "https://..."
+---
+
+<Layout title={`${title} — Vidyut Venkatesan`}>
+    <article>
+        <header class="project-header">
+            <h1 class="proj-title">{title}</h1>
+
+            <p class="summary">{summary}</p>
+
+            {tech && (
+                <ul class="tech-list">
+                    {tech.map(t => <li>{t}</li>)}
+                </ul>
+            )}
+
+            <ul class="header-links">
+                {github && (
+                    <li>
+                        <a href={github} target="_blank" rel="noopener">
+                            github<span class="ext-arrow">&nearrow;</span>
+                        </a>
+                    </li>
+                )}
+                {demo && (
+                    <li>
+                        <a href={demo} target="_blank" rel="noopener">
+                            live demo <span class="ext-arrow">&nearrow;</span>
+                        </a>
+                    </li>
+                )}
+            </ul>
+        </header>
+
+        <div id="md-content" class="content">
+            <!-- markdown content will be rendered here later -->
+        </div>
+
+        <footer class="project-footer">
+            <a href="/projects" class="back-link">
+                <span class="back-arrow">&larr;</span> All projects
+            </a>
+        </footer>
+    </article>
+</Layout>
+
+<style>
+    .project-header {
+        margin-bottom: 4rem;
+    }
+
+    .header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .proj-title {
+        font-family: var(--font-mono);
+        font-size: 1.75rem;
+        font-weight: 500;
+        margin: 0.75;
+    }
+
+    .summary {
+        color: var(--color-text-muted);
+        font-size: 1.05rem;
+        line-height: 1.5;
+        margin: 0 0 1.25rem;
+        max-width: 60ch;
+    }
+
+    .tech-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem 1rem;
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        color: var(--color-text-dim);
+    }
+
+    .header-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 1.25rem;
+        font-family: var(--font-mono);
+        font-size: 0.95rem;
+    }
+
+    .header-links a {
+        color: var(--color-accent);
+    }
+
+    .ext-arrow {
+        font-size: 1em;
+        display: inline-block;
+        transition: transform 0.2s ease;
+    }
+
+    .header-links:hover .ext-arrow {
+        transform: translate(3px, -3px);
+    }
+
+    /* These styles will apply once you wire up <Content /> from a markdown collection.
+       Using :global() so they apply to the rendered HTML inside #md-content. */
+
+    .content :global(h2) {
+        font-family: var(--font-mono);
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin: 3rem 0 1rem;
+    }
+
+    .content :global(h2:first-child) {
+        margin-top: 0;
+    }
+
+    .content :global(h3) {
+        font-family: var(--font-mono);
+        font-size: 1.05rem;
+        font-weight: 500;
+        margin: 2rem 0 0.75rem;
+    }
+
+    .content :global(p) {
+        line-height: 1.65;
+        margin: 0 0 1rem;
+        max-width: 65ch;
+    }
+
+    .content :global(a) {
+        color: var(--color-accent);
+    }
+
+    .content :global(blockquote) {
+        border-left: 3px solid var(--color-accent);
+        padding: 0.25rem 0 0.25rem 1.25rem;
+        margin: 1.75rem 0;
+        color: var(--color-text-muted);
+        font-style: italic;
+        max-width: 60ch;
+    }
+
+    .content :global(blockquote p) {
+        margin: 0;
+    }
+
+    .content :global(pre) {
+        background: var(--color-border);
+        padding: 1.25rem;
+        border-radius: 6px;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .content :global(:not(pre) > code) {
+        font-family: var(--font-mono);
+        font-size: 0.9em;
+        background: var(--color-border);
+        padding: 0.15em 0.4em;
+        border-radius: 3px;
+    }
+
+    .content :global(pre code) {
+        background: none;
+        padding: 0;
+        font-family: var(--font-mono);
+        color: var(--color-text);
+    }
+
+    .content :global(ul),
+    .content :global(ol) {
+        line-height: 1.65;
+        margin: 0 0 1rem;
+        padding-left: 1.5rem;
+        max-width: 65ch;
+    }
+
+    .content :global(li) {
+        margin-bottom: 0.25rem;
+    }
+
+    .content :global(img) {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        margin: 1.5rem 0;
+    }
+
+
+    .project-footer {
+        margin-top: 5rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--color-border);
+    }
+
+    .back-link {
+        font-family: var(--font-mono);
+        font-size: 0.95rem;
+        color: var(--color-accent);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        transition: gap 0.2s ease;
+    }
+
+    .back-link:hover {
+        gap: 0.7rem;
+    }
+
+    .back-arrow {
+        display: inline-block;
+        transition: transform 0.2s ease;
+    }
+
+    .back-link:hover .back-arrow {
+        transform: translateX(-3px);
+    }
+</style>
