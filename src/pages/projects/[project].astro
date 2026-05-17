@@ -1,17 +1,18 @@
 ---
-export const getStaticPaths = () => {
-    return [
-        { params: { project: "superprice" } },
-    ]
-}
-
+import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 
-const title = "Project Title";
-const summary = "One-line summary of the project.";
-const tech = ["Tech", "Stack", "Items"];
-const github = "https://github.com/...";  // or null
-const demo = null;  // or "https://..."
+export async function getStaticPaths() {
+    const projects = await getCollection('projects');
+    return projects.map(p => ({
+        params: { project: p.id },
+        props: { p }
+    }));
+}
+
+const project = Astro.props.p;
+const { Content } = await render(project);
+const { title, summary, tech, repo, demo } = project.data;
 ---
 
 <Layout title={`${title} — Vidyut Venkatesan`}>
@@ -28,10 +29,10 @@ const demo = null;  // or "https://..."
             )}
 
             <ul class="header-links">
-                {github && (
+                {repo && (
                     <li>
-                        <a href={github} target="_blank" rel="noopener">
-                            github<span class="ext-arrow">&nearrow;</span>
+                        <a href={repo} target="_blank" rel="noopener">
+                            repo<span class="ext-arrow">&nearrow;</span>
                         </a>
                     </li>
                 )}
@@ -45,8 +46,8 @@ const demo = null;  // or "https://..."
             </ul>
         </header>
 
-        <div id="md-content" class="content">
-            <!-- markdown content will be rendered here later -->
+        <div class="content">
+            <Content />
         </div>
 
         <footer class="project-footer">
@@ -59,7 +60,7 @@ const demo = null;  // or "https://..."
 
 <style>
     .project-header {
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
     }
 
     .header-row {
@@ -121,7 +122,7 @@ const demo = null;  // or "https://..."
         transform: translate(3px, -3px);
     }
 
-    /* These styles will apply once you wire up <Content /> from a markdown collection.
+    /* These styles will apply to <Content /> from the markdown collection.
        Using :global() so they apply to the rendered HTML inside #md-content. */
 
     .content :global(h2) {
@@ -145,11 +146,15 @@ const demo = null;  // or "https://..."
     .content :global(p) {
         line-height: 1.65;
         margin: 0 0 1rem;
-        max-width: 65ch;
+        max-width: 75ch;
     }
 
     .content :global(a) {
         color: var(--color-accent);
+    }
+
+    .content :global(a:hover) {
+        text-decoration: underline;
     }
 
     .content :global(blockquote) {
@@ -213,8 +218,6 @@ const demo = null;  // or "https://..."
 
     .project-footer {
         margin-top: 5rem;
-        padding-top: 2rem;
-        border-top: 1px solid var(--color-border);
     }
 
     .back-link {

@@ -1,12 +1,19 @@
+---
+interface Props {
+    title: string;
+    summary: string;
+    tech?: string[];
+}
+
+const { title, summary, tech } = Astro.props;
+---
+
 <a href="/projects/superprice" class="project-card">
-    <h3 class="project-title">SuperPrice <span class="arrow">&rarr;</span></h3>
-    <p class="project-info">React and Spring Boot grocery shopping website.</p>
-    <ul class="project-stack-list">
-        <li>Spring Boot</li>
-        <li>React</li>
-        <li>Java</li>
-        <li>TypeScript</li>
-    </ul>
+    <h3 class="project-title">{title} <span class="arrow">&rarr;</span></h3>
+    <p class="project-info">{summary}</p>
+    { tech && <ul class="project-stack-list">
+        {tech.map(t => <li>{t}</li>)}
+    </ul>}
 </a>
 
 <style>

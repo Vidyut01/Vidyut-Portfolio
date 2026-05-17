@@ -1,17 +1,21 @@
 ---
+import { getCollection } from "astro:content";
 import ProjectCard from "../../components/ProjectCard.astro";
 import Layout from "../../layouts/Layout.astro";
 
-
+const projects = await getCollection('projects');
 ---
 
 <Layout title="Projects - Vidyut Venkatesan">
     <h1 class="page-title">Projects</h1>
     <div class="project-list">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        {projects.map(p => 
+            <ProjectCard
+                title={p.data.title}
+                summary={p.data.summary}
+                tech={p.data.tech}
+            />
+        )}
     </div>
 </Layout>
 
