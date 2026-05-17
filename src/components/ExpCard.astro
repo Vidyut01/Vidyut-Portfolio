@@ -1,12 +1,22 @@
+---
+interface Props {
+    title: string;
+    company: string;
+    location?: string;
+    start: string;
+    end?: string;
+    summary: string;
+};
+
+const { title, company, location, start, end, summary } = Astro.props;
+---
 <div class="exp-card">
     <div class="exp-header">
-        <h3 class="exp-title">Software Engineering Intern</h3>
-        <span class="exp-date">Jul 2024 &ndash; Jul 2025</span>
+        <h3 class="exp-title">{title}</h3>
+        <span class="exp-date">{start} &ndash; {end || 'present'}</span>
     </div>
-    <p class="exp-company">IITM Pravartak Technologies Foundation, Chennai</p>
-    <p class="exp-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti fuga vero ut vitae officia minus harum animi exercitationem, officiis hic illo eaque labore, quaerat possimus facere error maiores, excepturi consequatur!
-    </p>
+    <p class="exp-company">{`${company}${location ? ', ' + location : ''}`}</p>
+    <p class="exp-content">{summary}</p>
 </div>
 
 <style>

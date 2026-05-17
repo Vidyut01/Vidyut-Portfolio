@@ -2,6 +2,8 @@
 email: vidyut0903@gmail.com
 github: https://github.com/Vidyut01
 linkedin: https://linkedin.com/in/vidyut-venkatesan
+featuredprojects: [superprice]
+indexmessage: Software engineer in Melbourne, working on backend systems and distributed infrastructure.
 ---
 
 #

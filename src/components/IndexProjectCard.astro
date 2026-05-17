@@ -1,6 +1,15 @@
-<a href="/projects/superprice" class="index-project-card">
-    <h3 class="index-project-title">SuperPrice <span class="arrow">→</span></h3>
-    <p class="index-project-info">React and Spring Boot grocery shopping website.</p>
+---
+interface Props {
+    title: string;
+    summary: string;
+    id: string;
+};
+
+const { title, summary, id } = Astro.props;
+---
+<a href={`/projects/${id}`} class="index-project-card">
+    <h3 class="index-project-title">{title} <span class="arrow">→</span></h3>
+    <p class="index-project-info">{summary}</p>
 </a>
 
 <style>

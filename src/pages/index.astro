@@ -1,30 +1,41 @@
 ---
+import { getCollection, getEntries, getEntry } from 'astro:content';
 import Contact from '../components/Contact.astro';
 import ExpCard from '../components/ExpCard.astro';
 import IndexProjectCard from '../components/IndexProjectCard.astro';
-import ProjectCard from '../components/ProjectCard.astro';
 import Layout from '../layouts/Layout.astro';
+
+const about = await getEntry('about', 'about')!;
+const featuredIds = about.data.featuredprojects;
+const featured = featuredIds ? await getEntries(featuredIds.map(id => ({ collection: 'projects', id }))) : null;
+
+const experiences = await getCollection('experiences');
 ---
 
 <Layout title="Vidyut Venkatesan">
-	<h1 class="index-title">
-		Software engineer in Melbourne, working on backend systems and distributed infrastructure.
-	</h1>
-	<Contact />
+	<h1 class="index-title">{about?.data.indexmessage}</h1>
+	<Contact email={about.data.email} github={about.data.github} linkedin={about.data.linkedin} />
 	
 	<section class="page-section">
 		<h2 class="section-label">Featured Projects</h2>
 		<div class="section-container">
-			<IndexProjectCard />
-			<IndexProjectCard />
+			{featured && featured.map(f => <IndexProjectCard id={f.id} title={f.data.title} summary={f.data.summary} />)}
 		</div>
 	</section>
 
 	<section class="page-section">
 		<h2 class="section-label">Experience</h2>
 		<div class="section-container">
-			<ExpCard />
-			<ExpCard />
+			{experiences && experiences.map(e =>
+				<ExpCard
+					title={e.data.title}
+					company={e.data.company}
+					location={e.data.location}
+					summary={e.data.summary}
+					start={e.data.start}
+					end={e.data.end}
+				/>
+			)}
 		</div>
 	</section>
 </Layout>

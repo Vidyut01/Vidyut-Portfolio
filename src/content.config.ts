@@ -18,8 +18,22 @@ const about = defineCollection({
     schema: z.object({
         email: z.string(),
         github: z.url().optional(),
-        linkedin: z.url().optional()
+        linkedin: z.url(),
+        featuredprojects: z.array(z.string()).optional(),
+        indexmessage: z.string(),
     }),
 });
 
-export const collections = { projects, about };
+const experiences = defineCollection({
+    loader: glob({ pattern: '**/*.md', base: './src/content/experiences' }),
+    schema: z.object({
+        title: z.string(),
+        company: z.string(),
+        location: z.string().optional(),
+        summary: z.string(),
+        start: z.string(),
+        end: z.string().optional(),
+    }),
+});
+
+export const collections = { projects, about, experiences };

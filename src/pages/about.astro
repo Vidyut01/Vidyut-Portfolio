@@ -1,7 +1,6 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
-import { render } from 'astro:content';
 
 const about = await getCollection('about');
 const { Content } = await render(about[0]);
