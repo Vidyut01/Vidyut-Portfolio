@@ -1,0 +1,31 @@
+---
+import ProjectCard from "../../components/ProjectCard.astro";
+import Layout from "../../layouts/Layout.astro";
+
+
+---
+
+<Layout title="Projects - Vidyut Venkatesan">
+    <h1 class="page-title">Projects</h1>
+    <div class="project-list">
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+    </div>
+</Layout>
+
+<style>
+    .page-title {
+		margin-bottom: 2.5rem;
+		font-weight: 500;
+		line-height: 1.4;
+		max-width: 40ch;
+	}
+
+    .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem   ;
+    }
+</style>

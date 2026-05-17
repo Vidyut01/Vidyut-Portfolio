@@ -1,11 +1,17 @@
 <a href="/projects/superprice" class="project-card">
     <h3 class="project-title">SuperPrice <span class="arrow">→</span></h3>
     <p class="project-info">React and Spring Boot grocery shopping website.</p>
+    <ul class="project-stack-list">
+        <li>Spring Boot</li>
+        <li>React</li>
+        <li>Java</li>
+        <li>TypeScript</li>
+    </ul>
 </a>
 
 <style>
     .project-card {
-        width: fit-content;
+        width: fit-100%;
         display: block;
         color: var(--color-text);
         padding: 0.5rem 0 0.5rem 1rem;
@@ -27,13 +33,12 @@
     .project-title {
         font-size: 1.4rem;
         font-weight: 500;
-        margin: 0 0 0.4rem;
+        margin: 0 0 0.75rem;
         transition: color 0.3s ease-in-out;
     }
 
     .project-info {
         font-size: 1.1rem;
-        color: var(--color-text-muted);
         margin: 0;
     }
 
@@ -45,4 +50,28 @@
     .project-card:hover .arrow {
         transform: translateX(3px);
     }
+
+    .project-stack-list {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0.5rem 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 1.25rem;
+        font-size: 1rem;
+    }
+
+    .project-stack-list li {
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        color: var(--color-text-dim);
+    }
+
+    .project-stack-list li:not(:last-child)::after {
+        content: "·";
+        color: var(--color-text-dim);
+        margin-left: 1rem;
+    }
+
 </style>
