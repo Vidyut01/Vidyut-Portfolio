@@ -13,4 +13,13 @@ const projects = defineCollection({
     }),
 });
 
-export const collections = { projects };
+const about = defineCollection({
+    loader: glob({ pattern: 'about.md', base: './src/content' }),
+    schema: z.object({
+        email: z.string(),
+        github: z.url().optional(),
+        linkedin: z.url().optional()
+    }),
+});
+
+export const collections = { projects, about };

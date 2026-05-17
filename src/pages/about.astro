@@ -1,0 +1,98 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import { render } from 'astro:content';
+
+const about = await getCollection('about');
+const { Content } = await render(about[0]);
+const { email, github, linkedin } = about[0].data;
+---
+
+<Layout title="About — Vidyut Venkatesan">
+    <article>
+        <header class="about-header">
+            <h1 class="title">About</h1>
+        </header>
+
+        <div class="content">
+            <Content />
+        </div>
+
+        <section class="contact-section">
+            <h2 class="section-label">Get in touch</h2>
+            <ul class="contact-list">
+                <li><a href={`mailto:${email}`}>{email}</a></li>
+                <li><a href={github} target="_blank" rel="noopener">github<span class="ext-arrow">↗</span></a></li>
+                <li><a href={linkedin} target="_blank" rel="noopener">linkedin<span class="ext-arrow">↗</span></a></li>
+                <li><a href="/resume.pdf" target="_blank" rel="noopener">resume (PDF)<span class="ext-arrow">↗</span></a></li>
+            </ul>
+        </section>
+    </article>
+</Layout>
+
+<style>
+    .about-header {
+        margin-bottom: 3rem;
+    }
+
+    .title {
+        font-family: var(--font-mono);
+        font-size: 1.75rem;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    .content :global(p) {
+        line-height: 1.7;
+        margin: 0 0 1.25rem;
+        max-width: 65ch;
+    }
+
+    .content :global(p:last-child) {
+        margin-bottom: 0;
+    }
+
+    .contact-section {
+        margin-top: 4rem;
+        padding-top: 2.5rem;
+        border-top: 1px solid var(--color-border);
+    }
+
+    .section-label {
+        font-family: var(--font-mono);
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--color-text);
+        margin: 0 0 1.5rem;
+    }
+
+    .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        font-family: var(--font-mono);
+        font-size: 1rem;
+    }
+
+    .contact-list a {
+        color: var(--color-accent);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.15em;
+    }
+
+    .ext-arrow {
+        font-size: 0.9em;
+        display: inline-block;
+        transition: transform 0.2s ease;
+    }
+
+    .contact-list a:hover .ext-arrow {
+        transform: translate(3px, -3px);
+    }
+</style>

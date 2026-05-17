@@ -4,7 +4,7 @@
     --color-text-muted: #b5ada1;
     --color-text-dim: #8a847a;
     --color-accent: #d68874;
-    --color-border: #0f0f14;
+    --color-border: #0f0f12;
 
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     --font-mono: 'JetBrains Mono', ui-monospace, monospace;
@@ -14,8 +14,6 @@ html,
 body {
     margin: 0;
     width: 100%;
-    /* height: 100%; */
-
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-sans);
@@ -24,12 +22,8 @@ body {
 main {
   max-width: 60%;
   margin: 3.5rem auto;
-  padding: 0 1.5rem;
-  /* height: 200px; temp */
-  
+  padding: 0 1.5rem;  
   border-radius: 5px;
-
-  /* box-shadow: 0 0 10px 0 var(--color-border); */
 }
 
 h1, h2, h3 {
