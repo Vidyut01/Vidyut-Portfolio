@@ -3,8 +3,8 @@ title: SuperPrice
 summary: Full-stack grocery price comparison platform.
 tech: [React, TypeScript, Spring Boot, Java]
 repo: https://github.com/Vidyut03/superprice
-featured: true
-order: 1
+featured: false
+order: 2
 ---
 
 ## Overview

@@ -3,23 +3,32 @@ interface Props {
     title: string;
     summary: string;
     tech?: string[];
-    id: string;
+    href?: string;
+    external?: boolean;
 };
 
-const { title, summary, tech, id } = Astro.props;
+const { title, summary, tech, href, external } = Astro.props;
 ---
 
-<a href={`/projects/${id}`} class="project-card">
-    <h3 class="project-title">{title} <span class="arrow">&rarr;</span></h3>
+{href && <a href={href} target={external ? '_blank' : '_self'} rel={external ? 'noopener noreferrer' : undefined} class="project-card">
+    <h3 class="project-title">{title}&nbsp;{external ? <span class="ext-arrow">&nearrow;</span> : <span class="arrow">→</span>}</h3>
     <p class="project-info">{summary}</p>
     { tech && <ul class="project-stack-list">
-        {tech.map(t => <li>{t}</li>)}
+        {tech.slice(0, 4).map(t => <li>{t}</li>)}
     </ul>}
-</a>
+</a>}
+
+{!href && <div class="project-card">
+    <h3 class="project-title">{title}</h3>
+    <p class="project-info">{summary}</p>
+    { tech && <ul class="project-stack-list">
+        {tech.slice(0, 4).map(t => <li>{t}</li>)}
+    </ul>}
+</div>}
 
 <style>
     .project-card {
-        width: fit-100%;
+        width: fit-content;
         display: block;
         color: var(--color-text);
         padding: 0.5rem 0 0.5rem 1rem;
@@ -55,8 +64,20 @@ const { title, summary, tech, id } = Astro.props;
         transition: transform 0.2s ease;
         display: inline-block;
     }
+
+    .ext-arrow {
+        color: var(--color-accent);
+        font-size: 1em;
+        display: inline-block;
+        transition: transform 0.2s ease;
+    }
+
     .project-card:hover .arrow {
         transform: translateX(3px);
+    }
+
+    .project-card:hover .ext-arrow {
+        transform: translate(3px, -3px);
     }
 
     .project-stack-list {

@@ -4,14 +4,24 @@ import ProjectCard from "../../components/ProjectCard.astro";
 import Layout from "../../layouts/Layout.astro";
 
 const projects = await getCollection('projects');
+
+const sorted = projects.sort((a, b) => {
+    if (a.data.featured !== b.data.featured) {
+        return a.data.featured ? -1 : 1;
+    }
+    const aOrder = a.data.order ?? Infinity;
+    const bOrder = b.data.order ?? Infinity;
+    return aOrder - bOrder;
+});
 ---
 
 <Layout title="Projects - Vidyut Venkatesan">
     <h1 class="page-title">Projects</h1>
     <div class="project-list">
-        {projects.map(p => 
+        {sorted.map(p => 
             <ProjectCard
-                id={p.id}
+                href={p.data.featured ? `/projects/${p.id}` : p.data.repo}
+                external={!p.data.featured}
                 title={p.data.title}
                 summary={p.data.summary}
                 tech={p.data.tech}

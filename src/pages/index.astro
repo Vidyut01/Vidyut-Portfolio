@@ -19,7 +19,14 @@ const experiences = await getCollection('experiences');
 	<section class="page-section">
 		<h2 class="section-label">Featured Projects</h2>
 		<div class="section-container">
-			{featured && featured.map(f => <IndexProjectCard id={f.id} title={f.data.title} summary={f.data.summary} />)}
+			{featured && featured.map(f => 
+				<IndexProjectCard
+					href={f.data.featured ? `/projects/${f.id}` : f.data.repo}
+                	external={!f.data.featured}
+					title={f.data.title}
+					summary={f.data.summary} 
+				/>
+			)}
 		</div>
 	</section>
 

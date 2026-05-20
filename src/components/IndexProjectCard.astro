@@ -2,15 +2,21 @@
 interface Props {
     title: string;
     summary: string;
-    id: string;
+    href?: string;
+    external?: boolean;
 };
 
-const { title, summary, id } = Astro.props;
+const { title, summary, href, external } = Astro.props;
 ---
-<a href={`/projects/${id}`} class="index-project-card">
-    <h3 class="index-project-title">{title} <span class="arrow">→</span></h3>
+{href && <a href={href} target={external ? '_blank' : '_self'} rel={external ? 'noopener noreferrer' : undefined} class="index-project-card">
+    <h3 class="index-project-title">{title}&nbsp;{external ? <span class="ext-arrow">&nearrow;</span> : <span class="arrow">→</span>}</h3>
     <p class="index-project-info">{summary}</p>
-</a>
+</a>}
+
+{!href && <div class="index-project-card">
+    <h3 class="index-project-title">{title}</span></h3>
+    <p class="index-project-info">{summary}</p>
+</div>}
 
 <style>
     .index-project-card {
@@ -51,7 +57,18 @@ const { title, summary, id } = Astro.props;
         transition: transform 0.2s ease;
         display: inline-block;
     }
+
+    .ext-arrow {
+        color: var(--color-accent);
+        font-size: 1em;
+        display: inline-block;
+        transition: transform 0.2s ease;
+    }
     .index-project-card:hover .arrow {
         transform: translateX(3px);
+    }
+
+    .index-project-card:hover .ext-arrow {
+        transform: translate(3px, -3px);
     }
 </style>

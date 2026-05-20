@@ -1,13 +1,16 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { parse, parseAsync } from 'astro:schema';
 
 export async function getStaticPaths() {
     const projects = await getCollection('projects');
-    return projects.map(p => ({
-        params: { project: p.id },
-        props: { p }
-    }));
+    return projects
+        .filter(p => p.data.featured)
+        .map(p => ({
+            params: { project: p.id },
+            props: { p },
+        }));
 }
 
 const project = Astro.props.p;
