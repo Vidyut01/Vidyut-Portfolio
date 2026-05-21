@@ -21,13 +21,3 @@ backend over REST.
 ## What I learned
 
 The team-coding parts were harder than the code itself.
-
-```ts
-function add(a: number, b: number): number {
-  return a + b;
-}
-```
-
-[Example Link](http://example.com)
-
-![image](../../assets/image.jpg)

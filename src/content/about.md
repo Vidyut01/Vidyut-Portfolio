@@ -8,12 +8,10 @@ indexmessage: Software engineer in Melbourne, working on backend systems and dis
 
 #
 
-I'm a software engineer based in Melbourne. I graduated from RMIT in late 2025 with a degree in software engineering and I'm currently looking for graduate and junior developer roles.
+I'm Vidyut. I finished my Software Engineering degree at RMIT in late 2025 and I'm currently in Melbourne looking for graduate roles.
 
-I came into software through the back door — I started caring about computers because I wanted to understand how they worked, not because I wanted to build websites. That's still roughly where my interests sit: the stack from the application down to the hardware, with the most fun parts usually being close to the bottom. I daily-drive Debian. I've written a PostgreSQL extension in C. I read kernel source for fun.
+Most of my work so far has been a mix of full-stack web and backend systems. I spent a year as an intern at IITM Pravartak in Chennai, working in C on Linux on the authentication side of a PostgreSQL extension, and my final-year capstone was a FastAPI/Kafka microservice for Telstra. Somewhere in between those I built a grocery-price comparison app, a markdown viewer for the terminal, and a few other things that mostly exist because I wanted to use them myself.
 
-That said, I'm not narrowly a systems person. My capstone at Telstra was a real-time event pipeline with Kafka. I've built full-stack things with React and Spring Boot. I've done frontend migrations and DevOps work and hackathons. The systems leaning is a preference, not a limit.
+Outside that, I run Debian on my laptop and have spent more time than is reasonable poking around in things like the boot chain and kernel internals, mostly out of curiosity rather than for any clear reason. I like learning how the layer underneath the one I'm using actually works.
 
-Outside of software I [edit this — interests, hobbies, one or two things that make you a person, not a profile].
-
-If you're hiring, or want to talk, the easiest way to reach me is by email.
+Away from a screen I play a lot of table tennis with friends, doodle when I'm thinking, lose at board games, and fall asleep to whatever's on TV.
