@@ -13,7 +13,7 @@ const { title, company, location, start, end, summary } = Astro.props;
 <div class="exp-card">
     <div class="exp-header">
         <h3 class="exp-title">{title}</h3>
-        <span class="exp-date">{start} &ndash; {end || 'present'}</span>
+        <span class="exp-date">{start.toLowerCase()} &ndash; {end?.toLowerCase() || 'present'}</span>
     </div>
     <p class="exp-company">{`${company}${location ? ', ' + location : ''}`}</p>
     <p class="exp-content">{summary}</p>

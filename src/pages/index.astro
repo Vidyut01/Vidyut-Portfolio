@@ -10,6 +10,31 @@ const featuredIds = about.data.featuredprojects;
 const featured = featuredIds ? await getEntries(featuredIds.map(id => ({ collection: 'projects', id }))) : null;
 
 const experiences = await getCollection('experiences');
+const sortedexp = experiences.sort((a, b) => {
+	// Sorts these in LinkedIn style order
+	
+    const parseStrictDate = (dateValue: string | undefined, fileId: string) => {
+        if (!dateValue || dateValue.toLowerCase() === 'present') {
+            return new Date().getTime();
+		}
+
+		const dateRegex = /^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\s\d{4}$/i;
+        if (!dateRegex.test(dateValue.trim())) {
+            throw new Error(`Malformed or invalid month name string "${dateValue}" found in experience: "${fileId}"`);
+        }
+
+		return new Date(dateValue).getTime();
+    };
+
+    const endA = parseStrictDate(a.data.end, a.id);
+    const endB = parseStrictDate(b.data.end, b.id);
+
+    if (endB !== endA) {
+        return endB - endA;
+    }
+
+    return parseStrictDate(b.data.start, b.data.title) - parseStrictDate(a.data.start, a.data.title);
+});
 ---
 
 <Layout title="Vidyut Venkatesan">
@@ -33,7 +58,7 @@ const experiences = await getCollection('experiences');
 	<section class="page-section">
 		<h2 class="section-label">Experience</h2>
 		<div class="section-container">
-			{experiences && experiences.map(e =>
+			{sortedexp && sortedexp.map(e =>
 				<ExpCard
 					title={e.data.title}
 					company={e.data.company}
