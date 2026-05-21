@@ -18,12 +18,12 @@ const { email, github, linkedin } = about[0].data;
         </div>
 
         <section class="contact-section">
-            <h2 class="section-label">Get in touch</h2>
+            <h2 class="section-label">Get in Touch!</h2>
             <ul class="contact-list">
                 <li><a href={`mailto:${email}`}>{email}</a></li>
                 <li><a href={github} target="_blank" rel="noopener">github<span class="ext-arrow">↗</span></a></li>
                 <li><a href={linkedin} target="_blank" rel="noopener">linkedin<span class="ext-arrow">↗</span></a></li>
-                <li><a href="/resume.pdf" target="_blank" rel="noopener">resume (PDF)<span class="ext-arrow">↗</span></a></li>
+                <li><a href="/resume.pdf" target="_blank" rel="noopener">resume (pdf)<span class="ext-arrow">↗</span></a></li>
             </ul>
         </section>
     </article>
@@ -54,7 +54,7 @@ const { email, github, linkedin } = about[0].data;
     .contact-section {
         margin-top: 2rem;
         padding-top: 2.5rem;
-        border-top: 1px solid var(--color-border);
+        border-top: 2px solid var(--color-border);
     }
 
     .section-label {

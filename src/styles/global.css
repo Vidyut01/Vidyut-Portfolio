@@ -4,7 +4,7 @@
     --color-text-muted: #b5ada1;
     --color-text-dim: #8a847a;
     --color-accent: #d68874;
-    --color-border: #0f0f12;
+    --color-border: #717178;
 
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     --font-mono: 'JetBrains Mono', ui-monospace, monospace;
@@ -20,7 +20,7 @@ body {
 }
 
 main {
-  max-width: 60%;
+  max-width: 916px;
   margin: 3.5rem auto;
   padding: 0 1.5rem;  
   border-radius: 5px;

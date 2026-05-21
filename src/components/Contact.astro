@@ -20,15 +20,16 @@ const { email, linkedin, github } = Astro.props;
         list-style: none;
         padding: 0;
         margin: 0;
-        display: flex;
+        display: inline-flex;
         flex-wrap: wrap;
+        align-items: center;
         gap: 1rem 1.25rem;
         font-family: var(--font-mono);
         font-size: 1rem;
     }
 
     .contact-list li {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         gap: 1.25rem;
     }
@@ -36,6 +37,9 @@ const { email, linkedin, github } = Astro.props;
     .contact-list li:not(:last-child)::after {
         content: "·";
         color: var(--color-text-dim);
+        display: inline-block;
+        transform: translateY(-1px);
+        line-height: 1;
     }
 
     .contact-list a {
