@@ -12,8 +12,7 @@ const featured = featuredIds ? await getEntries(featuredIds.map(id => ({ collect
 const experiences = await getCollection('experiences');
 const sortedexp = experiences.sort((a, b) => {
 	// Sorts these in LinkedIn style order
-	
-    const parseStrictDate = (dateValue: string | undefined, fileId: string) => {
+	const parseStrictDate = (dateValue: string | undefined, fileId: string) => {
         if (!dateValue || dateValue.toLowerCase() === 'present') {
             return new Date().getTime();
 		}
