@@ -2,7 +2,7 @@
 import { getCollection, getEntries, getEntry } from 'astro:content';
 import Contact from '../components/Contact.astro';
 import ExpCard from '../components/ExpCard.astro';
-import IndexProjectCard from '../components/IndexProjectCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 import Layout from '../layouts/Layout.astro';
 
 const about = await getEntry('about', 'about')!;
@@ -45,11 +45,12 @@ const sortedexp = experiences.sort((a, b) => {
 		<h2 class="section-label">Featured Projects</h2>
 		<div class="section-container">
 			{featured && featured.map(f => 
-				<IndexProjectCard
+				<ProjectCard
 					href={f.data.featured ? `/projects/${f.id}` : f.data.repo}
                 	external={!f.data.featured}
 					title={f.data.title}
 					summary={f.data.summary} 
+					tech={f.data.tech}
 				/>
 			)}
 		</div>

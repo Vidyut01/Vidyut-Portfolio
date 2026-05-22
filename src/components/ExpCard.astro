@@ -5,7 +5,7 @@ interface Props {
     location?: string;
     start: string;
     end?: string;
-    summary: string;
+    summary?: string;
 };
 
 const { title, company, location, start, end, summary } = Astro.props;
@@ -16,7 +16,7 @@ const { title, company, location, start, end, summary } = Astro.props;
         <span class="exp-date">{start.toLowerCase()} &ndash; {end?.toLowerCase() || 'present'}</span>
     </div>
     <p class="exp-company">{`${company}${location ? ', ' + location : ''}`}</p>
-    <p class="exp-content">{summary}</p>
+    {summary && <p class="exp-content">{summary}</p>}
 </div>
 
 <style>

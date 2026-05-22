@@ -1,7 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import { parse, parseAsync } from 'astro:schema';
 
 export async function getStaticPaths() {
     const projects = await getCollection('projects');
@@ -55,7 +54,7 @@ const { title, summary, tech, repo, demo } = project.data;
 
         <footer class="project-footer">
             <a href="/projects" class="back-link">
-                <span class="back-arrow">&larr;</span> All projects
+                <span class="back-arrow">&larr;</span> all projects
             </a>
         </footer>
     </article>
@@ -78,11 +77,9 @@ const { title, summary, tech, repo, demo } = project.data;
         font-family: var(--font-mono);
         font-size: 1.75rem;
         font-weight: 500;
-        margin: 0.75;
     }
 
     .summary {
-        color: var(--color-text-muted);
         font-size: 1.05rem;
         line-height: 1.5;
         margin: 0 0 1.25rem;
@@ -93,12 +90,17 @@ const { title, summary, tech, repo, demo } = project.data;
         list-style: none;
         padding: 0;
         margin: 0 0 1.5rem;
+        max-width: 60ch;
         display: flex;
         flex-wrap: wrap;
         gap: 0.4rem 1rem;
         font-family: var(--font-mono);
         font-size: 0.85rem;
-        color: var(--color-text-dim);
+        color: var(--color-text-muted);
+    }
+
+    .tech-list li:not(:last-child)::after {
+        content: ',';
     }
 
     .header-links {
@@ -121,7 +123,7 @@ const { title, summary, tech, repo, demo } = project.data;
         transition: transform 0.2s ease;
     }
 
-    .header-links:hover .ext-arrow {
+    .header-links a:hover .ext-arrow {
         transform: translate(3px, -3px);
     }
 
@@ -212,10 +214,10 @@ const { title, summary, tech, repo, demo } = project.data;
     }
 
     .content :global(img) {
-        max-width: 100%;
+        width: 100%;
+        max-width: 550px;
         height: auto;
         border-radius: 6px;
-        margin: 1.5rem 0;
     }
 
 

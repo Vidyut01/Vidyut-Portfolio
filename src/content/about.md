@@ -2,9 +2,8 @@
 email: vidyut0903@gmail.com
 github: https://github.com/Vidyut01
 linkedin: https://linkedin.com/in/vidyut-venkatesan
-featuredprojects: [superprice]
+featuredprojects: [telstra-sim-swap-api, terminal-markdown-viewer, spotify-extension]
 indexmessage: Software engineer looking to develop full-stack applications and scalable architecture.
-
 ---
 
 #

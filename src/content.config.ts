@@ -32,7 +32,7 @@ const experiences = defineCollection({
         title: z.string(),
         company: z.string(),
         location: z.string().optional(),
-        summary: z.string(),
+        summary: z.string().optional(),
         start: z.string(),
         end: z.string().optional(),
     }),
