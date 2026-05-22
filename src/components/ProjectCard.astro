@@ -56,6 +56,7 @@ const { title, summary, tech, href, external } = Astro.props;
 
     .project-info {
         font-size: 1.1rem;
+        max-width: 60ch;
         margin: 0;
     }
 
@@ -94,12 +95,12 @@ const { title, summary, tech, href, external } = Astro.props;
     .project-stack-list li {
         font-family: var(--font-mono);
         font-size: 0.85rem;
-        color: var(--color-text-dim);
+        color: var(--color-text-muted);
     }
 
     .project-stack-list li:not(:last-child)::after {
         content: "·";
-        color: var(--color-text-dim);
+        color: var(--color-text-muted);
         margin-left: 1rem;
     }
 
