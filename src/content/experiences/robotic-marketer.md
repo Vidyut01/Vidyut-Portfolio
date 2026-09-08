@@ -1,5 +1,5 @@
 ---
-title: Python Developer Intern
+title: Full Stack Developer Intern
 company: Robotic Marketer
 location: Melbourne
 start: aug 2026
